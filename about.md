@@ -4,12 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+# About me
+
+I work as a systems engineer in Melbourne, Australia, dealing with Office 365 and Microsoft/Amazon's public cloud products. My long-standing passion is the automation of everything. In my spare time, I like to write code and fly planes.
+
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Find my contact details and more on my profile: [me.chrisbrown.id.au](https://me.chrisbrown.id.au)
