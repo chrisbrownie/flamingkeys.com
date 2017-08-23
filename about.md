@@ -23,6 +23,6 @@ This is a project I'm working on to meet my requirements for  the Australian Tax
 * Email: [{{ site.footer-links.email }}](mailto:{{ site.footer-links.email }})
 * Twitter: [@{{ site.footer-links.twitter }}]({{ site.footer-links.twitter }})
 * Blog: [{{ site.footer-links.blog }}]({{ site.footer-links.blog }})
-* GitHub: [{{ site.footer-links.github }}]({{ site.footer-links.github }})
-* Instagram: [@{{ site.footer-links.instagram }}]({{ site.footer-links.instagram }})
+* GitHub: [{{ site.footer-links.github }}](https://github.com/{{ site.footer-links.github }})
+* Instagram: [@{{ site.footer-links.instagram }}](https://instagram.com/{{ site.footer-links.instagram }})
 * Flickr: [chrisbrowniephotos](https://www.flickr.com/photos/cjbrownie/)
