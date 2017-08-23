@@ -5,7 +5,7 @@ title: How to Disable and Enable AAD Connect Password Writeback using PowerShell
 
 Disabling AAD Connect Password Writeback is easy in both the GUI and Windows PowerShell. In a recent case I found myself troubleshooting AAD Connect where it was in a very broken state that meant the GUI was unavailable due to a pending upgrade:
 
-!(https://static.flamingkeys.com/wp-content/uploads/2017/02/01223644/aadconnect-upgrade-blocker1.png)
+![](https://static.flamingkeys.com/wp-content/uploads/2017/02/01223644/aadconnect-upgrade-blocker1.png)
 
 As part of my troubleshooting, I determined that Password Writeback needed to be disabled. Unfortunately, the dialogue shown above is blocking, which means I was unable to switch it off using the regular GUI. In comes PowerShell:
 
