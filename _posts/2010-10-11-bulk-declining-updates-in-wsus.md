@@ -89,7 +89,7 @@ This allowed me to decline every Itanium update in WSUS, significantly reducing 
 If you're running Windows Server 2012 or newer, you can do this really easily with PowerShell:
 
 {% highlight powershell %}
-Get-WsusUpdate | Where {$_.update.title -ilike &quot;*itanium*&quot; -or $_.update.title -ilike &quot;*ia64*&quot;} | Deny-WsusUpdate
+Get-WsusUpdate | Where {$_.update.title -ilike "*itanium*" -or $_.update.title -ilike "*ia64*"} | Deny-WsusUpdate
 {% endhighlight %}
 Warning: this is very, very, very slow. But it will get there eventually. Probably.
 
