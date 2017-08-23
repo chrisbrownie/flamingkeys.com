@@ -44,7 +44,10 @@ excerpt: This afternoon I decided to install Windows Server 2008 R2 on one of my
   my iPhone 4 and ASUS EeePC were connected and working fine over my apartment's WiFi
   connection...
 ---
-<p>This afternoon I decided to install Windows Server 2008 R2 on one of my laptops. Immediately it found most of the drivers, including my wireless network adapter. Fanatastic, says I. I was quickly lead to disappointment however as it could not find any wireless networks. This was confusing for a few moments but then I realised my iPhone 4 and ASUS EeePC were connected and working fine over my apartment's WiFi connection.</p>
-<p>I tried disabling and re-enabling the NIC, still couldn't see any networks. Rebooted the machine, updated the drivers, still no dice. To services.msc we go! Here I noticed the absence of ye old faithful 'WLAN AutoConfig' service.</p>
-<p>This service (I soon discovered) is a piece of cake to install. Open up Server Manager and click on Features. Choose Add Features in the Features pane, then check the box for "Wireless LAN Service'. Click Next, then click Install.</p>
-<p>Windows will chug away happily for a moment or two while it installs the service. Once it's completed click on Close. You will now be able to connect to your wireless network using the same method as other Windows 7/Vista devices.</p>
+This afternoon I decided to install Windows Server 2008 R2 on one of my laptops. Immediately it found most of the drivers, including my wireless network adapter. Fanatastic, says I. I was quickly lead to disappointment however as it could not find any wireless networks. This was confusing for a few moments but then I realised my iPhone 4 and ASUS EeePC were connected and working fine over my apartment's WiFi connection.
+
+I tried disabling and re-enabling the NIC, still couldn't see any networks. Rebooted the machine, updated the drivers, still no dice. To services.msc we go! Here I noticed the absence of ye old faithful 'WLAN AutoConfig' service.
+
+This service (I soon discovered) is a piece of cake to install. Open up Server Manager and click on Features. Choose Add Features in the Features pane, then check the box for "Wireless LAN Service'. Click Next, then click Install.
+
+Windows will chug away happily for a moment or two while it installs the service. Once it's completed click on Close. You will now be able to connect to your wireless network using the same method as other Windows 7/Vista devices.
