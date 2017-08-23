@@ -39,7 +39,7 @@ author:
 
 There are a [whole bunch](https://technet.microsoft.com/en-us/library/dn569286.aspx) of Encryption technologies in Office 365. [Office 365 Message Encryption](https://products.office.com/en-us/exchange/office-365-message-encryption) (OME) is Office 365's way of providing end-to-end message encryption, without requiring any software beyond a web browser for the receiving party. It also does not require the recipient to be running Windows, or using Outlook, or for them to be an Office 365 customer. It is easy to automate, has no certificate requirement, and allows the recipient to reply in an encrypted fashion.
 
-![]({{ site.baseurl }}/assets/Image_O365MessageEncryption_430x2171.jpg]
+![]({{ site.baseurl }}/assets/Image_O365MessageEncryption_430x2171.jpg)
 
 # Automatic Message Encryption
 
