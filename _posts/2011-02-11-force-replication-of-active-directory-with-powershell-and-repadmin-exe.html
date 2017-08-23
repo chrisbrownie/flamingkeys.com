@@ -1,0 +1,74 @@
+---
+layout: post
+title: Force Replication of Active Directory with PowerShell and Repadmin.exe
+date: 2011-02-11 19:26:52.000000000 +11:00
+type: post
+published: true
+status: publish
+categories:
+- Technology
+tags:
+- AD-DS
+- Microsoft
+- PowerShell
+- Scripting
+- Server 2003
+- Server 2008
+- Server 2008 R2
+- tips
+- windows
+meta:
+  _sexybookmarks_shortUrl: http://fla.im/gSQiUW
+  _sexybookmarks_permaHash: 61f6975d304fe59f16bedfcf1732729a
+  _edit_last: '1'
+  robotsmeta: index,follow
+  dsq_thread_id: '228763158'
+  _jd_tweet_this: ''
+  _jd_twitter: ''
+  _wp_jd_clig: ''
+  _wp_jd_bitly: ''
+  _wp_jd_wp: ''
+  _wp_jd_yourls: ''
+  _wp_jd_url: ''
+  _wp_jd_target: ''
+  _jd_wp_twitter: ''
+  _jd_post_meta_fixed: 'true'
+  _syntaxhighlighter_encoded: '1'
+author:
+  login: chris
+  email: chris@flamingkeys.com
+  display_name: Chris
+  first_name: Chris
+  last_name: Brown
+---
+<p>Perhaps you’re creating a user for immediate use in another site. Perhaps you’ve updated a group membership and accidentally used a DC in the wrong site. Maybe you’re just lazy? One of the most fun (read: boring) parts of <a href="http://www.flamingkeys.com/tag/ad-ds/" target="_blank">Active Directory</a> cross-site administration is replication. Opening up Active Directory Sites &amp; Services and mindlessly clicking <em>Replicate Now</em> gets painful, and begs the question of “how can I do this faster?”. Along came Polly…That is, if by Polly you mean repadmin.exe.</p>
+<p><a href="http://technet.microsoft.com/en-us/library/cc755360(WS.10).aspx" target="_blank">Repadmin</a> is the hidden treasure of AD-DS replication. It allows you to replicate a connection simply by executing two simple commands:</p>
+<pre>repadmin /kcc MEL-DC01 MEL-DC02 SYD-DC01repadmin /syncall /A /e MEL-DC01</pre>
+<p>This is easy enough, but when you have more than three or four Active Directory domain controllers it, again, feels slow. Along came <a href="http://www.flamingkeys.com/tag/powershell/" target="_blank">PowerShell</a>. In the script below I use Quest’s <a href="http://www.quest.com/powershell/activeroles-server.aspx" target="_blank">ActiveRoles Active Directory Management</a> Snap-in to find all domain controllers in the current domain and then replicate the connections to/from them all.</p>
+<p>Once we have a list of DCs, it is possible to loop through each then recalculate the replication topology and then replicate the connections. This performs the same task as clicking <em>Replicate Now</em> in dssite.msc.</p>
+<p>Replicate-ADDS.ps1:<br />
+[ps]# Transcribe output to log<br />
+$null = Start-Transcript &quot;$pwd\$([System.IO.Path]::GetFileNameWithoutExtension($MyInvocation.MyCommand.Definition)).log&quot;<br />
+# Check the QAD snapins are installed<br />
+if ( (Get-PSSnapin -Name Quest.ActiveRoles.ADManagement -ErrorAction silentlycontinue) -eq $null ) {<br />
+ # The QAD snapin is not active. Check it's installed<br />
+ if ( (Get-PSSnapin -Name Quest.ActiveRoles.ADManagement -Registered -ErrorAction SilentlyContinue) -eq $null) {<br />
+  Write-Error &quot;You must install Quest ActiveRoles AD Tools to use this script!&quot;<br />
+ } else {<br />
+  Write-Host &quot;Importing QAD Tools&quot;<br />
+  Add-PSSnapin -Name Quest.ActiveRoles.ADManagement -ErrorAction Stop<br />
+ }<br />
+}<br />
+Write-Host &quot;Beginning ADDS Replication&quot;<br />
+Write-Host &quot;==========================&quot;<br />
+# Find each domain controller, then do a foreach-object<br />
+Get-QADComputer -ComputerRole 'DomainController' | % {<br />
+ Write-Host &quot;Replicating $($_.Name)&quot;<br />
+ # Recalculate topology for this server<br />
+ $null = repadmin /kcc $_.Name<br />
+ # Replicate it<br />
+ $null = repadmin /syncall /A /e $_.Name<br />
+}<br />
+Write-Host &quot;==========================&quot;<br />
+Write-Host &quot;Completed ADDS Replication&quot;<br />
+Stop-Transcript[/ps]</p>

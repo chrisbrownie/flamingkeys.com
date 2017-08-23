@@ -1,0 +1,98 @@
+---
+layout: post
+title: How to list or export all Mailbox Email Addresses in Exchange 2007/2010 using
+  PowerShell
+date: 2011-07-25 00:03:19.000000000 +10:00
+type: post
+published: true
+status: publish
+categories:
+- Technology
+tags:
+- Automation
+- Exchange
+- PowerShell
+- Scripting
+- Server 2008 R2
+meta:
+  _jd_tweet_this: 'yes'
+  _jd_twitter: ''
+  _wp_jd_clig: ''
+  _wp_jd_bitly: ''
+  _wp_jd_wp: ''
+  _wp_jd_yourls: ''
+  _wp_jd_url: ''
+  _wp_jd_target: ''
+  _jd_wp_twitter: ''
+  _jd_post_meta_fixed: 'true'
+  _syntaxhighlighter_encoded: '1'
+  _edit_last: '1'
+  robotsmeta: index,follow
+  dsq_thread_id: '367071244'
+author:
+  login: chris
+  email: chris@flamingkeys.com
+  display_name: Chris
+  first_name: Chris
+  last_name: Brown
+---
+<p>This one comes up quite often, so I figured I'd make a quick and easy script for it. The first step is to make sure you're on a machine with the Exchange Management Tools installed, and logged on as a user with privileges to read mailbox properties. If you don’t want to read the explanation, skip ahead to The Script.</p>
+<p>First, let’s create an empty array to store the results in:</p>
+<p>[ps]$addresses = @()[/ps]</p>
+<p>Next, we’ll grab all the mailboxes from the organisation. By default Exchange will only return the first 1000 results, so we need to specify the <em>ResultSize</em> parameter to ensure all mailboxes are counted.</p>
+<p>[ps]$Mailboxes = Get-Mailbox -ResultSize Unlimited[/ps]</p>
+<p>Now loop through each mailbox using a <em>ForEach</em> statement:</p>
+<p>[ps]ForEach ($mbx in $Mailboxes) {}[/ps]</p>
+<p>Per each mailbox, let’s loop through the email addresses. Exchange stores SMTP, X400, SIP and any number of other address types in this property. We’re only interested in SMTP addresses, so we’ll use an if statement inside this loop. Because Exchange may qualify the address with either <strong>SMTP:</strong> or <strong>smtp: </strong>we’ll convert the prefix to lower and then do the compare:</p>
+<p>[ps]ForEach ($address in $mbx.EmailAddresses) {<br />
+    if ($address.ToString().ToLower().StartsWith(“smtp:”)) {}<br />
+}[/ps]</p>
+<p>Doing this has allowed us to only inspect SMTP addresses. Now we can create an object and insert the appropriate variables in it. Finally, we’ll append it to the <em>$addresses</em> array we created earlier. We’ll use SubString to retrieve only characters after the 5th position from the email address (smtp:kim.akers@contoso.com will become <a href="mailto:kim.akers@contoso.com">kim.akers@contoso.com</a>) :</p>
+<p>[ps]$obj = “” | Select-Object Alias,EmailAddress<br />
+$obj.Alias = $mbx.Alias<br />
+$obj.EmailAddress = $address.ToString().SubString(5)<br />
+$addresses += $obj[/ps]</p>
+<p>Now we have an object, <strong>$addresses</strong> which we can export and/or format in any number of ways. In my example below, I have exported it to CSV then opened the CSV (using Invoke-Item) with its default handler. You could also use Format-Table, Format-List and any number of different methods. You can even interact with this array in other cmdlets or pass it down the pipeline. The possibilities are endless!</p>
+<h4>The Script</h4>
+<p>[ps]<br />
+# -------------------------------------------------------------------------------<br />
+# Script: Get-AllEmailAddresses.ps1<br />
+# Author: Chris Brown http://www.flamingkeys.com/<br />
+# Date: 25/07/2011 00:03<br />
+# Keywords: Exchange, Email, SMTP<br />
+# comments:<br />
+#<br />
+# Versioning<br />
+# 25/07/2011  CJB  Initial Script<br />
+#<br />
+# -------------------------------------------------------------------------------</p>
+<p># Import the E2010 modules if available, otherwise import 2007's.<br />
+if (Get-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010 -Registered -ErrorAction SilentlyContinue) {<br />
+	# Found 2010, add it<br />
+	Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010<br />
+} else {<br />
+	# Add 2007<br />
+	Add-PSSnapin -Name Microsoft.Exchange.Management.PowerShell.Admin<br />
+}</p>
+<p># Create an object to hold the results<br />
+$addresses = @()<br />
+# Get every mailbox in the Exchange Organisation<br />
+$Mailboxes = Get-Mailbox -ResultSize Unlimited</p>
+<p># Recurse through the mailboxes<br />
+ForEach ($mbx in $Mailboxes) {<br />
+	# Recurse through every address assigned to the mailbox<br />
+	Foreach ($address in $mbx.EmailAddresses) {<br />
+		# If it starts with &quot;SMTP:&quot; then it's an email address. Record it<br />
+		if ($address.ToString().ToLower().StartsWith(&quot;smtp:&quot;)) {<br />
+			# This is an email address. Add it to the list<br />
+			$obj = &quot;&quot; | Select-Object Alias,EmailAddress<br />
+			$obj.Alias = $mbx.Alias<br />
+			$obj.EmailAddress = $address.ToString().SubString(5)<br />
+			$addresses += $obj<br />
+		}<br />
+	}<br />
+}<br />
+# Export the final object to a csv in the working directory<br />
+$addresses | Export-Csv addresses.csv -NoTypeInformation<br />
+# Open the csv with the default handler<br />
+Invoke-Item addresses.csv[/ps]</p>

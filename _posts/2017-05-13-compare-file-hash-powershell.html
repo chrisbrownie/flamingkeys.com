@@ -1,0 +1,55 @@
+---
+layout: post
+title: Compare a file to a hash with PowerShell
+date: 2017-05-13 08:27:55.000000000 +10:00
+type: post
+published: true
+status: publish
+categories:
+- Technology
+tags:
+- PowerShell
+- Scripting
+- windows
+meta:
+  dsq_thread_id: '5812954827'
+  _yoast_wpseo_primary_category: '8'
+  _yoast_wpseo_content_score: '30'
+  _yoast_wpseo_linkdex: '55'
+  _yoast_wpseo_metadesc: This simple function allows a caller to compare a file to
+    an existing hash in any format supported by Get-FileHash
+  _yoast_wpseo_focuskw: hash
+  _edit_last: '1'
+  _yst_is_cornerstone: ''
+  _yoast_wpseo_focuskw_text_input: hash
+author:
+  login: chris
+  email: chris@flamingkeys.com
+  display_name: Chris
+  first_name: Chris
+  last_name: Brown
+---
+<p>This simple function allows a caller to compare a file to an existing hash in any format supported by <a href="https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/get-filehash" target="_blank">Get-FileHash</a>. These, at time of writing (PowerShell 5.1 build 14393), are:</p>
+<ul>
+<li>SHA1</li>
+<li>SHA256</li>
+<li>SHA384</li>
+<li>SHA512</li>
+<li>MACTripleDES</li>
+<li>MD5</li>
+<li>RIPEMD160</li>
+</ul>
+<p>Using the script is quite simple. Add it to your console or script, then run:<br />
+https://gist.github.com/chrisbrownie/262d35f74e294967484b9f516330d3b1</p>
+<p>This will return the full object that shows the expected, generated, and hashing result:</p>
+<pre>
+Match Path                            ActualHash                               ExpectedHash
+----- ----                            ----------                               ------------
+ True C:\windows\system32\shell32.dll F683E63A08F385F52E86990CEB62CF1374A23373 F683E63A08F385F52E86990CEB62CF1374A23373
+</pre>
+<p>The result only can be retrieved by running the script as follows:<br />
+https://gist.github.com/chrisbrownie/81e9ce8e144108fc40e87cf08aa0f85d</p>
+<p>This will return a boolean, either $true or $false.</p>
+<pre>
+True
+</pre>
