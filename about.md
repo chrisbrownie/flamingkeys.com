@@ -20,9 +20,9 @@ This is a project I'm working on to meet my requirements for  the Australian Tax
 
 ## Find Me
 
-* Email: [chris@flamingkeys.com](mailto:chris@flamingkeys.com)
-* Twitter: [@chrisbrownie](https://twitter.com/chrisbrownie)
-* Blog: [flamingkeys.com](https://flamingkeys.com/)
-* GitHub: [chrisbrownie](https://github.com/chrisbrownie)
-* Instagram: [@chrisbrownie](https://instagram.com/chrisbrownie)
+* Email: [{{ site.footer-links.email }}](mailto:{{ site.footer-links.email }})
+* Twitter: [@{{ site.footer-links.twitter }}]({{ site.footer-links.twitter }})
+* Blog: [{{ site.footer-links.blog }}]({{ site.footer-links.blog }})
+* GitHub: [{{ site.footer-links.github }}]({{ site.footer-links.github }})
+* Instagram: [@{{ site.footer-links.instagram }}]({{ site.footer-links.instagram }})
 * Flickr: [chrisbrowniephotos](https://www.flickr.com/photos/cjbrownie/)
