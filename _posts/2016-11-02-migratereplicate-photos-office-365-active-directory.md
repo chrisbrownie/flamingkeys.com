@@ -23,5 +23,8 @@ author:
   first_name: Chris
   last_name: Brown
 ---
-<p>Users can easily set their photos in Office 365 via any number of interfaces. Performing this change in AD is a little more challenging. Fortunately, we can quite easily write these photos back into Active Directory with a little PowerShell script. You'll need the ActiveDirectory module and Exchange Online credentials with any multi-factor <em>disabled</em> as Exchange Web Services is used, which does not presently support MFA.</p>
-<p>https://gist.github.com/chrisbrownie/2636a296da4599e7afae6de2862ed9c7</p>
+
+Users can easily set their photos in Office 365 via any number of interfaces. Performing this change in AD is a little more challenging. Fortunately, we can quite easily write these photos back into Active Directory with a little PowerShell script. You'll need the ActiveDirectory module and Exchange Online credentials with any multi-factor <em>disabled</em> as Exchange Web Services is used, which does not presently support MFA.
+
+{% gist 2636a296da4599e7afae6de2862ed9c7 %}
+
