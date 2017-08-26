@@ -29,5 +29,7 @@ author:
   first_name: Chris
   last_name: Brown
 ---
-<p>I’ll be heading along to <a href="http://australia.msteched.com/">TechEd</a> on the Gold Coast this year. If you’re planning on attending, there will be a meetup for PowerShellers on Tuesday (details TBA). Hope to see you there! Please hit me up on Twitter (<a href="https://www.twitter.com/chrisbrownie">@chrisbrownie</a>) if you’re coming, it would be great to meet some more likeminded folk.</p>
-<p>More posts in the coming weeks. Until then, script up!</p>
+
+I’ll be heading along to [TechEd](http://australia.msteched.com/) on the Gold Coast this year. If you’re planning on attending, there will be a meetup for PowerShellers on Tuesday (details TBA). Hope to see you there! Please hit me up on Twitter ([@chrisbrownie](https://www.twitter.com/chrisbrownie)) if you’re coming, it would be great to meet some more likeminded folk.
+
+More posts in the coming weeks. Until then, script up!
