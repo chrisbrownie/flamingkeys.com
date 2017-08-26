@@ -37,7 +37,7 @@ author:
   first_name: Chris
   last_name: Brown
 ---
-There has long been “somewhere” in my exchange organisation that has a 10MB message size limit, rather than our <em>supposed</em> standard 15MB. Finally this annoyed me enough to do something about it. Because I’m all for saving time, I figured I’d script it. I trawled through Exchange and found all the places where it is possible to limit the size of messages (if I’ve missed any, please let me know!). From here I wrote a script to find the size limit on every instance of each of these possible places. As far as I can see, there are three places of concern in an Exchange 2010 organization: Send Connectors, Receive Connectors and the Global Transport Configuration.
+There has long been “somewhere” in my exchange organisation that has a 10MB message size limit, rather than our *supposed* standard 15MB. Finally this annoyed me enough to do something about it. Because I’m all for saving time, I figured I’d script it. I trawled through Exchange and found all the places where it is possible to limit the size of messages (if I’ve missed any, please let me know!). From here I wrote a script to find the size limit on every instance of each of these possible places. As far as I can see, there are three places of concern in an Exchange 2010 organization: Send Connectors, Receive Connectors and the Global Transport Configuration.
 
 ## Evaluating the Current Limits
 

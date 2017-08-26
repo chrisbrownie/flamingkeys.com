@@ -46,6 +46,6 @@ excerpt: For a reason too boring for me to describe, I had a need on a 2008 term
 
 For a reason too boring for me to describe, I had a need on a 2008 terminal server to disable Server Manager without using group policy. Without getting drastic and deleting all references to it, I found the following little gem buried within Windows Server 2008’s Task Scheduler.
 
-Open `Task Scheduler (Local)` &gt; `Task Scheduler Library` &gt; `Microsoft` &gt; `Windows` &gt; `Server Manager` you will see a task entitled *Server Manager*. It is scheduled to trigger at the log on of _any_ user. That is; even after you disable it by ticking the "Do not show me this console at logon" checkbox it is still loaded, solely for the purpose of checking if you have ticked it. Disable the aforementioned task and you and your users will no longer be bothered by this annoying utility.
+Open `Task Scheduler (Local)` > `Task Scheduler Library` > `Microsoft` > `Windows` > `Server Manager` you will see a task entitled *Server Manager*. It is scheduled to trigger at the log on of _any_ user. That is; even after you disable it by ticking the "Do not show me this console at logon" checkbox it is still loaded, solely for the purpose of checking if you have ticked it. Disable the aforementioned task and you and your users will no longer be bothered by this annoying utility.
 
 ![Server Manager Task]({{ site.baseurl }}/assets/ServerManagerTask-259x300.png)
