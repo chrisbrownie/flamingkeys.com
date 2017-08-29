@@ -28,9 +28,14 @@ author:
 excerpt: Changing the Office 365 ProPlus branch is easy using the registry, group
   policy, or the Office Customization Tool
 ---
-The <a href="https://technet.microsoft.com/en-au/library/mt455210.aspx" target="_blank">Office Customization Tool or Group Policy</a> can be used to change the branch of Office 365 ProPlus between any of the options (Current, Deferred, First Release for Deferred). The following registry keys can be applied to allow this without needing to use either Group Policy or the OCT.
-Using regedit or PowerShell, open the path HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\OfficeUpdate and create the following values:
-**updatebranch:** A string (REG_SZ) value specifying the name of the branch (e.g. "Current")
-**EnableAutomaticUpdates:** A hexadecimal (REG_DWORD) value specifying whether automatic updates are enabled or not (set 0 for disabled, 1 for enabled)
+The [Office Customization Tool or Group Policy](https://technet.microsoft.com/en-au/library/mt455210.aspx) can be used to change the branch of Office 365 ProPlus between any of the options (Current, Deferred, First Release for Deferred). The following registry keys can be applied to allow this without needing to use either Group Policy or the OCT.
+Using regedit or PowerShell, open the path `HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\OfficeUpdate` and create the following values:
+
+| Value | Data
+| --- | ---
+| `updatebranch` | A string (REG_SZ) value specifying the name of the branch (e.g. "Current")
+| `EnableAutomaticUpdates` | A hexadecimal (REG_DWORD) value specifying whether automatic updates are enabled or not (set 0 for disabled, 1 for enabled)
+
 Mine looks like this:
-<img src="{{ site.baseurl }}/assets/officepropluschannel.png" alt="officepropluschannel" width="806" height="224" class="aligncenter size-full wp-image-1166" />
+![]({{ site.baseurl }}/assets/officepropluschannel.png)
+

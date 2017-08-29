@@ -27,13 +27,16 @@ author:
   last_name: Brown
 ---
 HTTP Strict Transport Security, or HSTS, is a good way to help ensure visitors to your site do so using a secure connection. On top of this, it's a great way to ensure you get that all-important A+ score on Qualys.
-<img src="{{ site.baseurl }}/assets/flamingkeys-aplus-1024x524.png" alt="flamingkeys-aplus" width="550" height="281" class="aligncenter size-large wp-image-1156" />
+
+![]({{ site.baseurl }}/assets/flamingkeys-aplus-1024x524.png)
+
 If you're running a NetScaler in front of your service, you may want to configure these headers to appear care of the Virtual Server serving the content, rather than the back-end service or service group. This is quite simple using a rewrite policy.
-<h2>NetScaler Rewrite Policy to enable HSTS</h2>
-<code>
-add rewrite action RW_ACT_HSTS insert_http_header Strict-Transport-Security "\"max-age=157680000\""
-add rewrite policy RW_POL_HSTS true RW_ACT_HSTS
-bind lb vserver vs_remote -policy RW_POL_HSTS -priority 100 -gotoPriorityExpression END -type RESPONSE
-</code>
+
+# NetScaler Rewrite Policy to enable HSTS
+
+    add rewrite action RW_ACT_HSTS insert_http_header Strict-Transport-Security "\"max-age=157680000\""
+    add rewrite policy RW_POL_HSTS true RW_ACT_HSTS
+    bind lb vserver vs_remote -policy RW_POL_HSTS -priority 100 -gotoPriorityExpression END -type RESPONSE
+
 All responses through this vServer will now have the HSTS header attached. You can (and should) change the max-age to your preferred value.
-Thanks to <a href="https://ivancacic.com" target="_blank">Ivan Cacic</a> for this tip!
+Thanks to [Ivan Cacic](https://ivancacic.com) for this tip!

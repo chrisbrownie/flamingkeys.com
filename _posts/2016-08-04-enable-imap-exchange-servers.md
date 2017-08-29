@@ -29,6 +29,9 @@ author:
   last_name: Brown
 ---
 IMAP and POP3 are disabled on Exchange Server 2013 and 2016 servers by default. Chances are if you need to enable it, you'll need to enable it on all your servers at once. Fortunately, PowerShell makes this easy!
+
 Run Exchange Management Shell as administrator on an Exchange server and execute the following:
-<h2>PowerShell Script to enable IMAP on all servers</h2>
-https://gist.github.com/chrisbrownie/5266366490cde805e5a0e2bd7cff8eb1
+
+# PowerShell Script to enable IMAP on all servers
+
+{% gist 5266366490cde805e5a0e2bd7cff8eb1 %}
