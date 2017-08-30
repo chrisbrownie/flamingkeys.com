@@ -31,5 +31,7 @@ excerpt: Consider a scenario where you have a Windows Server 2012 R2 print serve
 ---
 Consider a scenario where you have a Windows Server 2012 R2 print server. When attempting to change the driver associated with a particular printer, you receive the following error:
 "Printer settings could not be saved. This operation is not supported."
-<img src="{{ site.baseurl }}/assets/Capture.png" alt="Printer settings could not be saved" width="369" height="185" class="aligncenter size-full wp-image-814" />
+
+![]({{ site.baseurl }}/assets/Capture.png)
+
 This error occurs because the printer is shared. Simply unshare the printer and you will be able to change the printer driver. To unshare the printer, right click it in Print Management, then choose **Properties**. On the **Sharing** tab, uncheck the **Share this printer** box then click **Apply**. You will now be able to change the printer driver associated with this printer. Don't forget to re-share it when you're done!

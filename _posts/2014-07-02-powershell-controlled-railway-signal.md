@@ -29,17 +29,24 @@ author:
   first_name: Chris
   last_name: Brown
 ---
-So tonight on Twitter, <a href="https://twitter.com/SlipperySeal">SlipperySeal</a> decided to unleash his Raspberry Pi controlled railway signals upon us. Using a <a href="http://pimpmylight.catchpole.net/">web page</a>, you can enable or disable the lights. I decided to take it one step further and hijack the page with a cheeky bit of PowerShell. I pulled out the URLs called when you update the lights, and used the Start-Sleep cmdlet to time my fake clicks.
-<code>
-http://pimpmylight.catchpole.net/?update=green
-http://pimpmylight.catchpole.net/?update=orange
-http://pimpmylight.catchpole.net/?update=red
-</code>
-The PowerShell to do this was quite simple:
-<code>
-{% highlight powershell %} C:\> $wc = New-Object System.Net.WebClient
-{% highlight powershell %} C:\> $uri = "http://pimpmylight.catchpole.net/?update=green"
-{% highlight powershell %} C:\> while ($true) { $null = $wc.DownloadString($uri); "Green!"; Start-Sleep -milliseconds 500 }
-</code>
+So tonight on Twitter, [SlipperySeal](https://twitter.com/SlipperySeal) decided to unleash his Raspberry Pi controlled railway signals upon us. Using a [web page](http://pimpmylight.catchpole.net/), you can enable or disable the lights. I decided to take it one step further and hijack the page with a cheeky bit of PowerShell. I pulled out the URLs called when you update the lights, and used the Start-Sleep cmdlet to time my fake clicks.
+
+    http://pimpmylight.catchpole.net/?update=green
+    http://pimpmylight.catchpole.net/?update=orange
+    http://pimpmylight.catchpole.net/?update=red
+
+The PowerShell to do this was quite simple: 
+
+{% highlight powershell %}
+$wc = New-Object System.Net.WebClient 
+$uri = "http://pimpmylight.catchpole.net/?update=green"
+while ($true) { 
+  $null = $wc.DownloadString($uri); 
+  "Green!"; 
+  Start-Sleep -milliseconds 500 
+}
+{% endhighlight %}
+
 Three copies, running at three different time intervals, and we had this:
-<iframe width="560" height="315" src="//www.youtube.com/embed/IZR0h7nRaK0" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/IZR0h7nRaK0" frameborder="0" allowfullscreen=""></iframe>

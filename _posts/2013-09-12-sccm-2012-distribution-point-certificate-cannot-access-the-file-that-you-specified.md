@@ -25,5 +25,7 @@ author:
   last_name: Brown
 ---
 When trying to import a certificate into a SCCM 2012 distribution point, you may receive an error message: “Cannot access the file that you specified”. This can occur even if you’ve specified a certificate on the local machine, and specified the correct password. It can even happen if you’re trying to change other configuration on a DP.
-<a href="https://flamingkeys.com/wp-content/uploads/2013/09/sccmdp.png"><img src="{{ site.baseurl }}/assets/sccmdp.png" width="409" height="153" class="aligncenter size-full wp-image-401" /></a>
- The reason for this error is that unless the Configuration Manager console is running as administrator, it cannot access the file. To make this work, simply right click the SCCM console and choose Run As Administrator. You will then be able to open it up and configure the certificate as necessary.
+
+![]({{ site.baseurl }}/assets/sccmdp.png)
+
+The reason for this error is that unless the Configuration Manager console is running as administrator, it cannot access the file. To make this work, simply right click the SCCM console and choose Run As Administrator. You will then be able to open it up and configure the certificate as necessary.
