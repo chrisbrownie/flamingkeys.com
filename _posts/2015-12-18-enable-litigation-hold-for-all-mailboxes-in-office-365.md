@@ -24,4 +24,5 @@ author:
   last_name: Brown
 ---
 There's no built-in feature at this time to enable litigation hold for all mailboxes in Exchange Online, but some organisations have this as a requirement. Here's a script that can be run ad-hoc to enable litigation hold for all mailboxes. When prompted, enter your Exchange Online credentials.
-https://gist.github.com/chrisbrownie/16affe1e52966a998d6f985a349c929e
+
+{% gist 16affe1e52966a998d6f985a349c929e %}

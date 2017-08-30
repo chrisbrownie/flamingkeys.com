@@ -29,14 +29,21 @@ author:
 ---
 The PowerShell execution policy seems to be widely misunderstood. It is not there to stop administrators doing things. At all.
 This is why:
+
 {% highlight powershell %}
 C:\> .\badscript.ps1
 {% endhighlight %}
-<img class="aligncenter size-full wp-image-1105" src="{{ site.baseurl }}/assets/2016-01-21-12_02_09-CDC1-on-172.16.10.240.png" alt="2016-01-21 12_02_09-CDC1 on 172.16.10.240" width="829" height="98" />
+
+
+![]({{ site.baseurl }}/assets/2016-01-21-12_02_09-CDC1-on-172.16.10.240.png)
+
 Cool! Can't run the script! Right?
 Wrong.
+
 {% highlight powershell %}
 C:\> Invoke-Expression (Get-Content .\badscript.ps1)
 {% endhighlight %}
-<img src="{{ site.baseurl }}/assets/2016-01-21-12_06_29-CDC1-on-172.16.10.240.png" alt="2016-01-21 12_06_29-CDC1 on 172.16.10.240" width="385" height="27" class="aligncenter size-full wp-image-1106" />
+
+![]({{ site.baseurl }}/assets/2016-01-21-12_06_29-CDC1-on-172.16.10.240.png)
+
 This is one of just many, many, ways to bypass the execution policy. So if you think this is all you need to do to protect your system from nefarious operators, now's the time to rethink that. Execution Policy serves many good purposes, but stopping users of a computer from running commands is not one of them.

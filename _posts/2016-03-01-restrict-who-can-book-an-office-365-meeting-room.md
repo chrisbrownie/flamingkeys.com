@@ -34,9 +34,12 @@ Exchange Server permits this through the use of In Policy and Out of Policy requ
 
 Using PowerShell, it's simple to turn off the ability for the majority of users to book a resource, while allowing only a select group of users to make in-policy bookings (note that any delegate behaviours will still take effect for out-of policy requests made by these users):
 
-First, connect <a href="https://technet.microsoft.com/en-au/library/jj984289(v=exchg.160).aspx" target="_blank">PowerShell to Exchange Online</a>. Run the following commands to configure the room "BoardRoom" to accept bookings only from Executives, Executive Assistants, and Sam L, the facilities maintenance manager who occasionally books the room for cleaning and to change lightbulbs.
+First, connect [PowerShell to Exchange Online](https://technet.microsoft.com/en-au/library/jj984289(v=exchg.160).aspx). Run the following commands to configure the room "BoardRoom" to accept bookings only from Executives, Executive Assistants, and Sam L, the facilities maintenance manager who occasionally books the room for cleaning and to change lightbulbs.
+
 {% highlight powershell %}
 Get-Mailbox BoardRoom | Set-CalendarProcessing -AllBookInPolicy:$false -AllRequestInPolicy:$false -BookInPolicy "Executives@contoso.com","EAs@contoso.com","Sam.L@contoso.com"
 {% endhighlight %}
+
 Easy as that. Anyone attempting to book the room while not a member of the above groups will receive a rejection message:
-<img src="{{ site.baseurl }}/assets/2016-03-01-11_30_13-Mail-Chris-Brown-Outlook-Internet-Explorer-InPrivate.png" alt="roomrejection" width="418" height="308" class="aligncenter size-full wp-image-1116" />
+
+![]({{ site.baseurl }}/assets/2016-03-01-11_30_13-Mail-Chris-Brown-Outlook-Internet-Explorer-InPrivate.png)

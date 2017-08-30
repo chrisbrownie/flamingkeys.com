@@ -28,19 +28,29 @@ author:
   first_name: Chris
   last_name: Brown
 ---
+
 If you've found this post, you've probably tried to add a subdomain to Office 365 and run across this error:
+
 > sub.contoso.com is a subdomain of a domain that was added by using the Microsoft Online Services Module for Windows PowerShell so you'll need to also use Windows PowerShell to add sub.contoso.com to Microsoft Online Services.
+
 or similar.
-The following commands should be used from the <a href="http://aka.ms/aadposh" target="_blank">Windows Azure Active Directory PowerShell Module</a> to resolve this:
-**For a federated domain (AD FS):**
-https://gist.github.com/chrisbrownie/3e7bead963dc797a4b443644f1dce8d1
-**For a managed (standard, in cloud, non-federated, password sync, cloud only, whatever you'd like to call it) domain:**
-https://gist.github.com/chrisbrownie/32f62e2082681825b8f75f34fbfcde1e
-You can use <a href="https://msdn.microsoft.com/en-us/library/dn194090.aspx" target="_blank">Get-MsolDomain</a> to validate this configuration
+
+The following commands should be used from the [Windows Azure Active Directory PowerShell Module](https://aka.ms/aadposh) to resolve this:
+
+## For a federated domain (AD FS)
+
+{% gist 3e7bead963dc797a4b443644f1dce8d1 %}
+
+## For a managed (standard, in cloud, non-federated, password sync, cloud only, whatever you'd like to call it) domain
+
+{% gist 32f62e2082681825b8f75f34fbfcde1e %}
+
+You can use [Get-MsolDomain](https://msdn.microsoft.com/en-us/library/dn194090.aspx) to validate this configuration.
+
 Keep in mind that subdomains *must* use the same authentication method as any parent domains.
+
 ## Cmdlets used in this post:
-<ul>
-<li><a href="https://msdn.microsoft.com/en-us/library/dn194123.aspx" target="_blank">Connect-MsolService</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/dn194081.aspx" target="_blank">New-MsolDomain</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/dn194090.aspx" target="_blank">Get-MsolDomain</a></li>
-</ul>
+
+* [Connect-MsolService](https://msdn.microsoft.com/en-us/library/dn194123.aspx)
+* [New-MsolDomain](https://msdn.microsoft.com/en-us/library/dn194081.aspx)
+* [Get-MsolDomain](https://msdn.microsoft.com/en-us/library/dn194090.aspx)

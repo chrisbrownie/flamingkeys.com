@@ -38,7 +38,7 @@ author:
   last_name: Brown
 ---
 
-Migrating [Sohos PureMessage](http://www.sophos.com/products/enterprise/email/security-and-control/microsoft-exchange/) to another SQL database is a simple process. On the server you wish to modify, open `C:\Program Files\Sophos\PureMessage\Config\LastKnown\LocalConfig.xml`. 
+Migrating [Sophos PureMessage](http://www.sophos.com/products/enterprise/email/security-and-control/microsoft-exchange/) to another SQL database is a simple process. On the server you wish to modify, open `C:\Program Files\Sophos\PureMessage\Config\LastKnown\LocalConfig.xml`. 
 
 Under the `<LocalConfig>` tag there are four `DBSettings` tags, one for each database. These are called `ConfigDBSettings`, `QuarDBSettings`, `ReportingDBSettings` and `DirectoryDBSettings`. Inside each of these is another called `<DatabaseName>`. By modifying this `DatabaseName` you are able to change where Sophos PureMessage stores its data. This is useful if using an SQL server with more than a few databases. I like to prefix all of my Sophos PureMessage databases with “PM” to make them stand out. An extract of my completed config file looks like this:
 
