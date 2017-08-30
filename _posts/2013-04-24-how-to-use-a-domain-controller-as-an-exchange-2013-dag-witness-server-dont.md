@@ -45,7 +45,7 @@ Checking the log file gives the following access denied message, which is less t
 
 ![]({{ site.cdnbaseurl }}wp-content/uploads/2013/04/image1.png)
 
-What’s happening here is that the Exchange server is trying to create a file share on the FSW host, in this case **E15DC1**. In order to allow this functionality on a domain controller, you must add it to the **Exchange Trusted Subsystem **group. This is an Active Directory group used internally by Exchange for reading/writing this share, amongst other things. Typically it will only contain Exchange Servers, but go ahead and add your file share witness host to it as well:
+What’s happening here is that the Exchange server is trying to create a file share on the FSW host, in this case **E15DC1**. In order to allow this functionality on a domain controller, you must add it to the **Exchange Trusted Subsystem** group. This is an Active Directory group used internally by Exchange for reading/writing this share, amongst other things. Typically it will only contain Exchange Servers, but go ahead and add your file share witness host to it as well:
 
 ![]({{ site.cdnbaseurl }}wp-content/uploads/2013/04/image2.png)
 
