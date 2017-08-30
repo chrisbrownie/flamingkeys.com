@@ -35,7 +35,8 @@ author:
   last_name: Brown
 ---
 With the advent of Windows PowerShell, performing bulk tasks just gets easier and easier. Consider a scenario where you have a bunch of Domain Local groups that you need to convert to Global...or any other type of conversion. This is a task that can take a large amount of time to complete manually, even with copious amounts of coffee and House of Cards on the TV. Fortunately, a few lines of PowerShell can make short work of this.
-Consider the aforementioned Domain Local to Global conversion. As the astute reader will know, a Domain Local to Global conversion isn't a one-step process. Each group must first be converted to Universal. Why this caveat exists is far too detailed to discuss here, but Microsoft have a pretty ok writeup of it <a title="Group scope" href="https://technet.microsoft.com/en-us/library/cc755692(v=ws.10).aspx" target="_blank">here</a>.
+Consider the aforementioned Domain Local to Global conversion. As the astute reader will know, a Domain Local to Global conversion isn't a one-step process. Each group must first be converted to Universal. Why this caveat exists is far too detailed to discuss here, but Microsoft have a pretty ok writeup of it [here](https://technet.microsoft.com/en-us/library/cc755692(v=ws.10).aspx).
+
 {% highlight powershell %}
 # Get all the groups in the OU we're targeting
 $groups = Get-ADGroup -Filter * -SearchBase "OU=File Shares,OU=Groups,DC=Contoso,DC=com"
@@ -47,4 +48,5 @@ Foreach ($group in $groups) {
   $group | Set-ADGroup -GroupScope 1
 }
 {% endhighlight %}
+
 This code isn't really optimised for any more than a few hundred groups, so buyer beware when running this across a large number of groups.
