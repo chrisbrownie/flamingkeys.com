@@ -27,7 +27,7 @@ author:
   first_name: Chris
   last_name: Brown
 ---
-Granting administrative rights over all mailboxes to an Exchange administrator was a simple task in Exchange 2003 and 2007, which requires a little more consideration. I’ve written a simple PowerShell script that will allow you to automate this process. As new mailboxes are created, this script will add the appropriate permissions. Please note that this script will only work (by default) on Exchange 2010 SP2. If you’re running RTM or SP1, please remove the “-AutoMapping:$false” parameter.
+Granting administrative rights over all mailboxes to an Exchange administrator was a simple task in Exchange 2003 and 2007, which requires a little more consideration. I’ve written a simple PowerShell script that will allow you to automate this process. As new mailboxes are created, this script will add the appropriate permissions. Please note that this script will only work (by default) on Exchange 2010 SP2. If you’re running RTM or SP1, please remove the "-AutoMapping:$false" parameter.
 I schedule this script to run daily at 6AM. Your mileage may vary, but this allows it (and my other morning Exchange maintenance scripts) to finish before people start logging on around 7AM)
 Note: I'd suggest you don't use this script if you use a moderate-large organisation. Assigning permissions on a one-off basis is a much more economical method.
 {% highlight powershell %}

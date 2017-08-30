@@ -25,7 +25,7 @@ author:
   last_name: Brown
 ---
 
-I’m writing a very rudimentary script that has a need to convert something like “groundFloorMeetingRoom” to “Ground Floor Meeting Room”. Rather than prompt the user to enter this, I decided it’d be easier to just get the script to do it. This turned out to be a fun little exercise, resulting in the *CamelCaseToDisplayName *function below. Hopefully it can help someone!
+I’m writing a very rudimentary script that has a need to convert something like "groundFloorMeetingRoom" to "Ground Floor Meeting Room". Rather than prompt the user to enter this, I decided it’d be easier to just get the script to do it. This turned out to be a fun little exercise, resulting in the *CamelCaseToDisplayName *function below. Hopefully it can help someone!
 
 {% highlight powershell %}
 function CamelCaseToDisplayName ([string]$inString) {
@@ -50,4 +50,4 @@ function CamelCaseToDisplayName ([string]$inString) {
 
 It’s pretty simple to run, just throw something like this in your script:
 
-`$newName = CamelCaseToDisplayName “groundFloorMeetingRoom”`
+`$newName = CamelCaseToDisplayName "groundFloorMeetingRoom"`

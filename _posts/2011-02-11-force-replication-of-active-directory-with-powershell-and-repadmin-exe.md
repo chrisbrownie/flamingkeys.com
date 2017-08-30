@@ -42,7 +42,7 @@ author:
   last_name: Brown
 ---
 
-Perhaps you’re creating a user for immediate use in another site. Perhaps you’ve updated a group membership and accidentally used a DC in the wrong site. Maybe you’re just lazy? One of the most fun (read: boring) parts of Active Directory cross-site administration is replication. Opening up Active Directory Sites & Services and mindlessly clicking _Replicate Now_ gets painful, and begs the question of “how can I do this faster?”. Along came Polly…That is, if by Polly you mean repadmin.exe.
+Perhaps you’re creating a user for immediate use in another site. Perhaps you’ve updated a group membership and accidentally used a DC in the wrong site. Maybe you’re just lazy? One of the most fun (read: boring) parts of Active Directory cross-site administration is replication. Opening up Active Directory Sites & Services and mindlessly clicking _Replicate Now_ gets painful, and begs the question of "how can I do this faster?". Along came Polly…That is, if by Polly you mean repadmin.exe.
 
 [Repadmin](http://technet.microsoft.com/en-us/library/cc755360(WS.10).aspx) is the hidden treasure of AD-DS replication. It allows you to replicate a connection simply by executing two simple commands:
 

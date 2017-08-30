@@ -59,14 +59,14 @@ Per each mailbox, let’s loop through the email addresses. Exchange stores SMTP
 
 {% highlight powershell %}
 ForEach ($address in $mbx.EmailAddresses) {
-    if ($address.ToString().ToLower().StartsWith(“smtp:”)) {}
+    if ($address.ToString().ToLower().StartsWith("smtp:")) {}
 }
 {% endhighlight %}
 
 Doing this has allowed us to only inspect SMTP addresses. Now we can create an object and insert the appropriate variables in it. Finally, we’ll append it to the `$addresses` array we created earlier. We’ll use SubString to retrieve only characters after the 5th position from the email address (`smtp:kim.akers@contoso.com` will become `kim.akers@contoso.com`):
 
 {% highlight powershell %}
-$obj = “” | Select-Object Alias,EmailAddress
+$obj = "" | Select-Object Alias,EmailAddress
 $obj.Alias = $mbx.Alias
 $obj.EmailAddress = $address.ToString().SubString(5)
 $addresses += $obj

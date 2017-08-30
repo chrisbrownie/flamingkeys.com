@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Outlook 2010 Error when moving folder in another user’s mailbox: “Cannot copy
-  this folder because it may contain private items”'
+title: 'Outlook 2010 Error when moving folder in another user’s mailbox: "Cannot copy
+  this folder because it may contain private items"'
 date: 2012-05-15 10:30:00.000000000 +10:00
 type: post
 published: true
@@ -23,7 +23,7 @@ author:
   first_name: Chris
   last_name: Brown
 ---
-This error occurs when you try to move a folder in another user’s mailbox that contains private items (duh!). Upon Googling (Binging) this you’ll see people sprouting about how this is a bug that’s been around forever, it’s something Microsoft should fix, yada yada yada. The fact of the matter is, private items are private for a reason, and by design. You can mark items private so that without your express consent, no other user – not even one with “Full Control” over your mailbox – can see them. Allowing users to see and move private items is a somewhat trivial exercise, but the solution is relatively evasive on the internet, so here goes:
+This error occurs when you try to move a folder in another user’s mailbox that contains private items (duh!). Upon Googling (Binging) this you’ll see people sprouting about how this is a bug that’s been around forever, it’s something Microsoft should fix, yada yada yada. The fact of the matter is, private items are private for a reason, and by design. You can mark items private so that without your express consent, no other user – not even one with "Full Control" over your mailbox – can see them. Allowing users to see and move private items is a somewhat trivial exercise, but the solution is relatively evasive on the internet, so here goes:
 Open Outlook as the user whose mailbox the private items are in. Click on File, Account Settings and then Delegate Access.
 <a href="https://www.flamingkeys.com/wp-content/uploads/2012/05/image.png"><img style="display: inline" title="image" alt="image" src="{{ site.baseurl }}/assets/image_thumb.png" width="240" height="179" /></a>
 Click on Add, then find the account of the user who’s receiving the error. Complete the dialogue so the settings below are set (at minimum):
@@ -34,5 +34,5 @@ Click OK, then OK again. It’s as easy as that! Restart Outlook and you will be
 <a href="https://www.flamingkeys.com/wp-content/uploads/2012/05/image2.png"><img style="display: inline" title="image" alt="image" src="{{ site.baseurl }}/assets/image_thumb2.png" width="345" height="134" /></a>
 This is an error that halts the saving of settings, so you need to tell Outlook to ignore this. A simple registry key will suffice:
 HKCU\Software\Microsoft\Office\14.0\Outlook\Preferences
-Create a DWORD “IgnoreSOBError” with value “1”.
+Create a DWORD "IgnoreSOBError" with value "1".
 Restart Outlook and you’ll be able to perform the actions above without seeing this error.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My first Podcast! – “I Require More Stuff”
+title: My first Podcast! – "I Require More Stuff"
 date: 2011-09-29 19:35:21.000000000 +10:00
 type: post
 published: true

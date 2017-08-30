@@ -42,7 +42,7 @@ Fortunately, these steps are quite easy to script.
 
 Before you proceed any further, be sure that manual deployments of the Mac client work. [James Bannan](http://twitter.com/jamesbannan) has an excellent guide on this [over on his website](http://www.jamesbannanit.com/2012/10/enrol-mac-os-x-clients-in-configuration-manager-2012-sp1/).
 
-In this instance, we’ll assume the script is being run as part of an automated deployment, so it would be useful to have the dmg file hosted somewhere, as well as credentials that can request the certificate. For this, I’ve created a directory in my SCCM 2012 SP1 MP’s Default Web Site called “MacClient”, with contents as follows:
+In this instance, we’ll assume the script is being run as part of an automated deployment, so it would be useful to have the dmg file hosted somewhere, as well as credentials that can request the certificate. For this, I’ve created a directory in my SCCM 2012 SP1 MP’s Default Web Site called "MacClient", with contents as follows:
 
 {% highlight powershell %}
 Get-ChildItem C:\inetpub\wwwroot\MacClient
