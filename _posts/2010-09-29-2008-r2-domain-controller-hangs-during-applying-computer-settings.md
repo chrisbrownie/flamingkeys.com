@@ -39,6 +39,9 @@ excerpt: Today I was faced with a strange problem. One of our domain controllers
   its Netlogon share. I thought "hmm that's weird" and rebooted it, assuming it would
   be back up in a matter of minutes. Oh how wrong I was. After 20 minutes this server
   was not back up, which had me slightly concerned...
+
+redirect_from:
+  - /2010/09/2008-r2-domain-controller-hangs-during-applying-computer-settings/
 ---
 
 Today I was faced with a strange problem. One of our domain controllers (essentially the 'primary' one, all FSMO roles, DNS, etc) stopped letting me make changes to its Netlogon share. I thought "hmm that's weird" and rebooted it, assuming it would be back up in a matter of minutes. Oh how wrong I was. After 20 minutes this server was not back up, which had me slightly concerned. After making the 5 minute trip to the server room (no iLOM on this server) I saw it had hung on Windows Server 2008 R2's "Applying Computer Settings" screen. I rebooted it again, hoping it would come up. Again, it appeared to hang on this screen. I was able to ping it from other machines, but it seemed the AD-DS services were not up as I could not access it via RPC, UNC, RDP etc.

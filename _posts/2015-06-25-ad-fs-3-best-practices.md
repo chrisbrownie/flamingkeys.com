@@ -29,6 +29,10 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /adfsbp
+  - /adfsbp/
+  - /2015/06/ad-fs-3-best-practices/
 ---
 Active Directory Federation Service has come a long way since humble beginnings in Server 2003 with AD FS 1.0\. Now at version 3.0 on Windows Server 2012 R2, Microsoft have taken big steps to allow for customisation and versatility of the product. There's a lot you can change, and I'll attempt to summarise my list of recommended changes below. This is by no means an exhaustive list, but it's a good place to start for any new deployment. Running Windows Server 2016? You probably want [AD FS for Windows Server 2016 Best Practices](/ad-fs-windows-server-2016-best-practices/).
 
