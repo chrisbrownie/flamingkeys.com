@@ -22,6 +22,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/02/exception-0x80070520-when-you-try-to-configure-ssl-certificate-for-an-iis-web-site/
 ---
 The error text displayed when attempting to configure the binding is 
 

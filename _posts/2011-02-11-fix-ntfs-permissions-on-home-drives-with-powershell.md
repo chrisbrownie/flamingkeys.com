@@ -37,6 +37,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/02/fix-ntfs-permissions-on-home-drives-with-powershell/
 ---
 
 Keeping permissions in check for your users’ home drives can be a pain at times. I’m a big fan of the `\\server\share$\username` model. This keeps it simple, and allows for easy migration of users between servers.

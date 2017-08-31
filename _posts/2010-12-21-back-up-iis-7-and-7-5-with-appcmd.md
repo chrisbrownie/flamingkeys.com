@@ -37,6 +37,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2010/12/back-up-iis-7-and-7-5-with-appcmd/
 ---
 As a follow up to my [previous post](/iis-7-backup-and-restore) regarding a GUI for backing up IIS, I thought it pertinent to cover how to back it up using the command line or PowerShell. This is a slightly more in-depth task than the earlier described method. There are four commands as part of the AppCmd backup module. These are list, add, restore and delete. AppCmd is located in %windir%\system32\inetsrv. You should set-location or cd to this directory before attempting to execute any of the commands below, or they will fail.
 

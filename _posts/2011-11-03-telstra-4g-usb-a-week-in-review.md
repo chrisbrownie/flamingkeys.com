@@ -39,6 +39,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/11/telstra-4g-usb-a-week-in-review/
 ---
 <aside class="aside-info">This is a repost of my [original post on AuTechHeads](http://www.autechheads.com/blogs/entryid/428/telstra-4g-usb-a-week-in-review)</aside>
 

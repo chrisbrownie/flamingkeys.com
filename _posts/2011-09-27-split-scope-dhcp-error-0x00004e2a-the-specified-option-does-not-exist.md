@@ -32,6 +32,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/09/split-scope-dhcp-error-0x00004e2a-the-specified-option-does-not-exist/
 ---
 When configuring split-scope DHCP you may encounter this error message: 
 

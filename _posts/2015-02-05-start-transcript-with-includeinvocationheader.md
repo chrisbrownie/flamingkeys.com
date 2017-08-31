@@ -30,6 +30,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/02/start-transcript-with-includeinvocationheader/
 ---
 While tinkering with PowerShell in the new build 9926 of Windows 10, I've investigating using `Start-Transcript` more in my work. This is a great way of logging the inputs and outputs of PowerShell consoles. The cmdlet basically says what it does on the box - transcripts the whole console output.
 

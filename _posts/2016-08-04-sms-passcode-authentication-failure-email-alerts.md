@@ -24,6 +24,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2016/08/sms-passcode-authentication-failure-email-alerts/
 ---
 SMS PASSCODE is a good tool, but it does not provide functionality to alert in the event of an authentication failure. It does, however, log quite verbosely to Windows event logs. Built-in Windows functionality can be used to receive email alerts when a login fails:
 

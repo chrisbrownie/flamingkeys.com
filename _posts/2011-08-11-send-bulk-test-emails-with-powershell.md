@@ -34,6 +34,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/08/send-bulk-test-emails-with-powershell/
 ---
 I'm doing some load testing on one of my SMTP Smart Hosts, and needed to send a few thousand emails in a controlled space of time. I've written this quick little script to do so:
 {% highlight powershell %}

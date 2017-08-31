@@ -36,6 +36,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/02/change-or-move-sophos-puremessage-sql-database/
 ---
 
 Migrating [Sophos PureMessage](http://www.sophos.com/products/enterprise/email/security-and-control/microsoft-exchange/) to another SQL database is a simple process. On the server you wish to modify, open `C:\Program Files\Sophos\PureMessage\Config\LastKnown\LocalConfig.xml`. 

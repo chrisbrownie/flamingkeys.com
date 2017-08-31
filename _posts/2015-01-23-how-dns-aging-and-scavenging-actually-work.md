@@ -34,6 +34,8 @@ author:
 excerpt: There's a lot of conversation on the 'net about how DNS Aging and Scavenging
   within Windows Server work, but lots of it doesn't make sense, and most of it is
   pretty convoluted. I'll aim to clear that up below in plain English.
+redirect_from: 
+  - /2015/01/how-dns-aging-and-scavenging-actually-work/
 ---
 There's a lot of conversation on the Internet about how DNS Aging and Scavenging within Windows Server work, but lots of it doesn't make sense, and most of it is pretty convoluted. I'll aim to clear that up below in plain English. Consider an environment with a bunch of Domain Controllers all holding the DNS server role, and a bunch of clients. Sound familiar? I hope so. Let's assume you've followed best practice and have DNS aging/scavenging configured on all zones, and the scavenging process configured on a single DNS server (use [this script](http://blogs.msdn.com/b/muaddib/archive/2013/08/03/how-to-determine-which-dns-server-s-have-scavenging-enabled.aspx) to make sure, thanks [@nickstugr](https://twitter.com/nickstugr)). 
 

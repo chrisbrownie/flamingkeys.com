@@ -32,6 +32,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/09/my-first-podcast-i-require-more-stuff/
 ---
 This week I was privileged to speak with [Mick Huxley](https://twitter.com/thehuxman) on the Coalface Tech podcast. 
 

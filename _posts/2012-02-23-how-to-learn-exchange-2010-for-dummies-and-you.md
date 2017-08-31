@@ -22,6 +22,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/02/how-to-learn-exchange-2010-for-dummies-and-you/
 ---
 One of the people I was lucky enough to meet at Tech·Ed Australia 2011 was Mr Paul Cunningham, who runs the popular website [Exchange Server Pro](http://www.exchangeserverpro.com/). 
 

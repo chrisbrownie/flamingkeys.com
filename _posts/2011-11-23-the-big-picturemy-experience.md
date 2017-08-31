@@ -37,6 +37,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/11/the-big-picturemy-experience/
 ---
 Microsoft Australia's new [The Big Picture](http://www.microsoft.com/australia/thebigpicture) event is truly an experience. Starting yesterday in Melbourne with *The Big Picture Partner Day*, followed today by a customer day; the event is geared strongly towards the "story" of IT, rather than all the different bits and pieces of product we all look after in the infrastructure world.
 

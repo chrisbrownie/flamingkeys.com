@@ -35,6 +35,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from: 
+  - /2016/09/how-to-upgrade-ad-fs-3-to-ad-fs-on-windows-server-2016/
 ---
 Upgrading from AD FS on Windows Server 2012 R2 (AD FS 3) is a relatively straightforward procedure, which can be completed easily using the AD FS installation and configuration wizards.
 **Note: This information is compiled based on a preview build of Windows Server 2016 (Technical Preview 5). All information is subject to change in the public release of Windows Server 2016.**

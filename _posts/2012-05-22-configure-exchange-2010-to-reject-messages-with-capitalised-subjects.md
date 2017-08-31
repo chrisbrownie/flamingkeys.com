@@ -24,6 +24,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/05/configure-exchange-2010-to-reject-messages-with-capitalised-subjects/
 ---
 Upon receiving a few emails with their subjects entirely in capital letters, I wondered if I could defuse my extreme frustration at this situation using every Exchange admin’s best friend; the Transport Rule.
 

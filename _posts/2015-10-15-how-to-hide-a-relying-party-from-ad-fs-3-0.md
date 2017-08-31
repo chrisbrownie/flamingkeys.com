@@ -28,6 +28,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/10/how-to-hide-a-relying-party-from-ad-fs-3-0/
 ---
 If you've set up AD FS before, you've probably seen this drop-down list that allows your users to select an application to log into. You may also have a particularly troublesome app that doesn't work with this IdP initiated method of login. Using the steps below, we can hide one or more of the options from the AD FS 3.0 dropdown list.
 

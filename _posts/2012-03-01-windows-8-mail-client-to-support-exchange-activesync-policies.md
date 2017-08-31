@@ -26,6 +26,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/03/windows-8-mail-client-to-support-exchange-activesync-policies/
 ---
 As we all know by now, the [Windows 8 Consumer Preview](http://windows.microsoft.com/en-US/windows-8/consumer-preview) was released today (or ysterday for some...time zone dependent). 
 

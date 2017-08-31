@@ -27,6 +27,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/06/monitoring-xenserver-with-scom-2012/
 ---
 If you’ve tried to to monitor your XenServer hosts from SCOM 2012, you’ll note that the guides are geared towards SCOM 2007. The steps below will help you to get SCOM 2012 monitoring XenServer (version 6.0.2, in this instance). The first couple of steps are the same as for SCOM 2007. 
 

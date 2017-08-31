@@ -29,6 +29,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2016/07/determine-owa-users-powershell/
 ---
 Discovering which users have logged into Outlook Web App (OWA) compared to those who haven't is a bit of a challenge in Exchange Online and Exchange Server 2013/2016. One method is to make use of the fact that prior to first login, a user won't have selected their language. Using this piece of knowledge allows us to perform a (somewhat rudimentary) evaluation of which users *probably* have logged into OWA.
 

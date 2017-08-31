@@ -27,6 +27,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2016/03/restrict-who-can-book-an-office-365-meeting-room/
 ---
 Restricting the ability to book a meeting room is a popular scenario for organisations with boardrooms and other such meeting rooms that cannot be booked by the majority of employees. Typically this is addressed by the use of [mailbox delegates](http://exchangeserverpro.com/exchange-server-2013-room-equipment-mailboxes/), though for some this is cumbersome where a significant group of users might require the ability to book a resource, but not all of them should be notified to approve requests.
 

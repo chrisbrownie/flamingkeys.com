@@ -23,6 +23,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/03/office-365-live-in-australia/
 ---
 After what seems like forever, Microsoft have finally lit up Office 365 in a couple of Aussie datacentres. First [announced in December](http://news.microsoft.com/en-au/2014/12/08/locallyhostedo365andcrm/), Microsoft committed to a March 2015 release. Well, it's March still&hellip;just. 
 While reasons abound to want to have your tenant located on our glorious, metadata-retaining shores, the proof is, as they say, in the pudding. I spun up a demo tenant this morning after the announcement, and after testing my new tenant's SharePoint site, the performance gains (as far as latency goes) are quite impressive. From my (awful) Wi-Fi connection at the [Office 365 Summit](http://summit.office.com/) in Sydney, I fired off a traceroute to make sure my new tenant was, in fact, in Australia:

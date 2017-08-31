@@ -27,6 +27,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2013/01/how-to-perform-an-unattended-install-of-the-sccm-2012-client-on-mac-os-x/
 ---
 <aside class="aside-warning">
 I'm aware this method is not working for the latest version of the client. When I have a Mac available to me I will update this post.

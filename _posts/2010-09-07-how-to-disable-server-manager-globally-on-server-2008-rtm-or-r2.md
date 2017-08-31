@@ -42,6 +42,8 @@ excerpt: For a reason too boring for me to describe, I had a need on a 2008 term
   server to disable Server Manager without using group policy. Without getting drastic
   and deleting all references to it, I found the following little gem buried within
   Windows Server 2008’s Task Scheduler.
+redirect_from: 
+  - /2010/09/how-to-disable-server-manager-globally-on-server-2008-rtm-or-r2/
 ---
 
 For a reason too boring for me to describe, I had a need on a 2008 terminal server to disable Server Manager without using group policy. Without getting drastic and deleting all references to it, I found the following little gem buried within Windows Server 2008’s Task Scheduler.

@@ -22,6 +22,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/02/how-to-reconnect-a-disconnected-archive-mailbox-in-exchange-2010/
 ---
 When trying to connect an archive mailbox in Exchange 2010, you may receive an error
 > The legacy DN ‘/O=ORG/OU=FIRST ADMINISTRATIVE GROUP/CN=RECIPIENTS/CN=KIM.AKERS’ of disconnected mailbox does not match user legacy dn ‘O=ORG/OU=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=Kim.Akerts639’.

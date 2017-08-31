@@ -28,6 +28,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2014/07/powershell-controlled-railway-signal/
 ---
 So tonight on Twitter, [SlipperySeal](https://twitter.com/SlipperySeal) decided to unleash his Raspberry Pi controlled railway signals upon us. Using a [web page](http://pimpmylight.catchpole.net/), you can enable or disable the lights. I decided to take it one step further and hijack the page with a cheeky bit of PowerShell. I pulled out the URLs called when you update the lights, and used the Start-Sleep cmdlet to time my fake clicks.
 

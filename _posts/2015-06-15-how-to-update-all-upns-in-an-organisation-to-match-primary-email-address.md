@@ -30,6 +30,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/06/how-to-update-all-upns-in-an-organisation-to-match-primary-email-address/
 ---
 If you're transitioning to Office 365, Windows Azure Active Directory, or any other of the many ?aaS offerings that require routable [UPNs](https://msdn.microsoft.com/en-us/library/ms677605(v=vs.85).aspx) (that is, a UPN with a **publicly resolvable domain name** **that you own**) you've likely stumbled across a need to change UPNs en masse. While ADUC gives us the option to change just the suffix for everyone in one go, many organisations need to change the left hand `name` part of this UPN.
 Consider the following scenario:

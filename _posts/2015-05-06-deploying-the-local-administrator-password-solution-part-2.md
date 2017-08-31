@@ -33,6 +33,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/05/deploying-the-local-administrator-password-solution-part-2/
 ---
 In this series of three posts, I demonstrate the installation and configuration of Microsoft's Local Administrator Password Solution (LAPS). This is the second post that covers configuration of Active Directory to support LAPS. For links to parts 1 and 3, see the bottom of this post.
 

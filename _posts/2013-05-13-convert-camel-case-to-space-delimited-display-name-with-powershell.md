@@ -23,6 +23,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2013/05/convert-camel-case-to-space-delimited-display-name-with-powershell/
 ---
 
 I’m writing a very rudimentary script that has a need to convert something like "groundFloorMeetingRoom" to "Ground Floor Meeting Room". Rather than prompt the user to enter this, I decided it’d be easier to just get the script to do it. This turned out to be a fun little exercise, resulting in the *CamelCaseToDisplayName *function below. Hopefully it can help someone!

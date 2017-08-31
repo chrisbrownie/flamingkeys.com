@@ -27,6 +27,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/06/exchange-2013-with-ad-fs-login-fails-with-wrongaudienceuriorbadsigningcert/
 ---
 If you've attempted to configure Exchange Server 2013's OWA and EAC/ECP to authenticate using AD FS, you've probably had a pretty fun time of it. Microsoft's guides are good...but there's bits and pieces missing. 
 

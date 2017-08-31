@@ -34,6 +34,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/08/the-activesyncdevice-cannot-be-foundunable-to-delete-active-sync-devices-in-exchange-2010/
 ---
 
 This error occurs when inheritable permissions are not enabled on a mailbox. You will see this error when trying to remove an ActiveSync Device:

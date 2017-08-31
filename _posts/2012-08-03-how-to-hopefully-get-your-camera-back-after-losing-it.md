@@ -20,6 +20,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/08/how-to-hopefully-get-your-camera-back-after-losing-it/
 ---
 I see way too many blog posts and Reddit threads about "I found a camera. Do you know these people?". It always seems so fruitless and you rarely hear about a happy ending.
 

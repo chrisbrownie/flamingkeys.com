@@ -35,6 +35,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/09/monitoring-user-logons-to-specific-workstations/
 ---
 The script and group policy below will allow you to monitor a specific group of users logging on to certain workstations/computers. This is helpful if you believe users are logging onto machines in an unusual pattern or to workstations they probably shouldn’t be. Of course you can lock users down to specific machines, but in this situation, that wasn’t an option for me.
 

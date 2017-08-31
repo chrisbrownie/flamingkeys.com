@@ -39,6 +39,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/03/moving-the-mouse-cursor-with-windows-powershell/
 ---
 
 We have several large displays with some rudimentary presentation software on them (displaying RSS feeds, video stream etc). Unfortunately this software is..not ideally written... For this reason I have published out a script to have the computers restart every morning at 5AM. Unfortunately, as a result of this reboot, we end up with the mouse cursor smack bang in the middle of the screen. In my discussions with one of our HelpDesk staff we concluded that a small script to move the mouse out of the way would be a far more ideal use of everyone's time than for him to meander on over and move the mouse himself. Moving the mouse cursor with PowerShell is much easier than one may imagine.

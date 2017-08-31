@@ -24,6 +24,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2013/07/group-policy-wmi-queries-for-windows-8-do-not-work-for-windows-8-1/
 ---
 With Windows 8.1, Microsoft have increased the operating system’s internal version number from Windows 8’s `6.2.x` to `6.3.x`. This means that if you have any "Windows 8" WMI queries, they’ll fail for 8.1. You can use the following query to get around this:
 

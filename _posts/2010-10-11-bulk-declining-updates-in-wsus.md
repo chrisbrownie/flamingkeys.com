@@ -42,6 +42,8 @@ excerpt: Windows Server Update Services (WSUS) is a fickle beast, at best. Anyon
   just how much TLC it requires in order to function even semi-happily. I have recently
   been tasked with deploying it to our network of over 1500 laptops and 100 or so
   desktops, all...
+redirect_from:
+  - /2010/10/bulk-declining-updates-in-wsus/
 ---
 
 Windows Server Update Services (WSUS) is a fickle beast, at best. Anyone who has ever used it on a large (or, for that matter, small or medium) network knows just how much TLC it requires in order to function even semi-happily. I have recently been tasked with deploying it to our network of over 1500 laptops and 100 or so desktops, all of which currently update direct from Microsoft Update on the internet. There is a WSUS server in place, but it was set up quickly and hasn't been maintained since installation. It was receiving updates for nearly all Microsoft products, and updates had never been approved or even looked at, so I had quite a hefty job ahead of me, deleting all the irrelevant updates. Being the enthusiastic (read: lazy) systems administrator that I am, the first thing I did was hunted for a script to do this for me...Needless to say, I couldn't find anything. I managed to remove the unwanted application updates using the _Options -> Products and Classifications_ section, however WSUS provides no options for removing architecture-specific updates. We don't have any Itanium servers here, so I don't need the updates.

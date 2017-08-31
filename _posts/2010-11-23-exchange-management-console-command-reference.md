@@ -37,6 +37,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2010/11/exchange-management-console-command-reference/
 ---
 
 Microsoft have taken a new approach with Exchange Management Console (EMC) for Microsoft Exchange Server 2010. Unlike Exchange 2007 (to a certain extent), almost every single management task is either a PowerShell command, or a front-end to a PowerShell command. Let’s say, for example, you want to create a new Mailbox. Easy, you say: Recipient Configuration, Mailbox, New Mailbox. Fill in the blanks and hit Next, right? This is great if you want to just create one or two users, but what if, like me, you need to create several hundred in one go? This could get tedious.

@@ -23,6 +23,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/02/my-second-podcast-coalface-tech-episode-23the-year-of-rtm/
 ---
 
 ![]({{ site.cdnbaseurl }}wp-content/uploads/2012/02/cft.jpg)

@@ -30,6 +30,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/05/deploying-the-local-administrator-password-solution-part-1/
 ---
 In this series of three posts, I demonstrate the installation and configuration of Microsoft's Local Administrator Password Solution (LAPS). This is the first post that covers installation of the software on management computers and clients. For links to parts 2 and 3, see the bottom of this post.
 

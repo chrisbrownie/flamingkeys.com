@@ -26,6 +26,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2013/01/how-to-retrieve-mac-os-x-10-8-active-directory-computer-account-password/
 ---
 Active Directory bound Mac OS X computers traditionally stored the computer account credentials in /Library/Preferences/DirectoryService/ActiveDirectory.plist. As of OS X 10.7, this has been moved to the (theoretically) more secure System Keychain. Because of this, a slightly different method has to be employed to extract the computer account password. Fortunately, this is easier than the old plist method. Simply run the following command in Terminal as root (or any sudoer):
 

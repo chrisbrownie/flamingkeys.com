@@ -27,6 +27,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/06/enable-keep-me-signed-in-for-ad-fs-3-0/
 ---
 Keep Me Signed In (KMSI) is popularly used around the web-based software world to provide users with a login assurance that persists beyond the current session. In AD FS land, Microsoft call this [Persistent SSO](https://technet.microsoft.com/en-us/library/mt148493.aspx). Persistent SSO encapsulates a number of technologies, but the simplest of these is KMSI. KMSI will provide a user with a 24-hour cookie, allowing for logins to persist across browser sessions for up to a day.
 

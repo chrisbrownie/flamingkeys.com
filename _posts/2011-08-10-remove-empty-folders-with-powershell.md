@@ -34,6 +34,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/08/remove-empty-folders-with-powershell/
 ---
 Here’s a quick one for removing all empty folders within a specified folder structure. Theoeretically (untested) it could work with other situations that address PSDrives (try `Get-PSDrive`).
 My organisation uses [FSRM](http://technet.microsoft.com/en-us/library/cc755603(WS.10).aspx) to age data on our "scratch" network shares. Files are automatically removed after 30 days. This introduced a small problem with leaving empty folders behind, causing some confusion. The result is a network share with no old files, but with lots of empty folders. This script will delete all folders with no children. (Note: in our production environment, I have preceded this with a script that deletes all unnecessary/folder state files such as [thumbs.db](http://en.wikipedia.org/wiki/Windows_thumbnail_cache) and [.ds_store](http://en.wikipedia.org/wiki/.DS_Store). These files are hidden on their native OSes and while a directory may appear empty, if it contains these files the script below will not handle it (I realise I could have included an exclusion list of files to ignore when deleting directories, but that’s really beyond the scope of what I wanted this script to do).

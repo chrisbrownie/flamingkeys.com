@@ -26,6 +26,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2016/01/why-execution-policy-is-not-security/
 ---
 The PowerShell execution policy seems to be widely misunderstood. It is not there to stop administrators doing things. At all.
 This is why:

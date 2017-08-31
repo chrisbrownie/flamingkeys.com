@@ -36,6 +36,8 @@ excerpt: With my impending job change, I think it's about time I create a new pa
   I haven't had a new password for many years (horrible, I know). I have tried a few
   over the years but they've all been thrown to the wayside in the way of my current
   password (which is an awesome one, just old).
+redirect_from:
+  - /2010/07/creating-a-secure-and-memorable-password/
 ---
 With my impending job change, I think it's about time I create a new password. I haven't had a new password for many years (horrible, I know). I have tried a few over the years but they've all been thrown to the wayside in the way of my current password (which is an awesome one, just old).
 

@@ -32,6 +32,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/03/copy-dns-zones-between-windows-dns-servers/
 ---
 Consider a scenario where you're migrating Secondary DNS zones between multiple Windows DNS servers. This is a tedious process at best when completed via the GUI. Fortunately, PowerShell makes this considerably easier. With just one command, all Secondary zones can be copied across from Server A to Server B. This even works with old versions of Windows, provided you run the commands remotely from Windows Server 2012 R2's DnsServer module:
 

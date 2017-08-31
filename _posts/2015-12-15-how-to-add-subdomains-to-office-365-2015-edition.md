@@ -27,6 +27,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/12/how-to-add-subdomains-to-office-365-2015-edition/
 ---
 
 If you've found this post, you've probably tried to add a subdomain to Office 365 and run across this error:

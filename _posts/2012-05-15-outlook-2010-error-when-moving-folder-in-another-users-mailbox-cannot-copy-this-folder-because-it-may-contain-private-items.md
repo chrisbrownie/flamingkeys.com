@@ -22,6 +22,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/05/outlook-2010-error-when-moving-folder-in-another-users-mailbox-cannot-copy-this-folder-because-it-may-contain-private-items/
 ---
 This error occurs when you try to move a folder in another user’s mailbox that contains private items (duh!). Upon Googling (Binging) this you’ll see people sprouting about how this is a bug that’s been around forever, it’s something Microsoft should fix, yada yada yada. The fact of the matter is, private items are private for a reason, and by design. You can mark items private so that without your express consent, no other user – not even one with "Full Control" over your mailbox – can see them. Allowing users to see and move private items is a somewhat trivial exercise, but the solution is relatively evasive on the internet, so here goes:
 Open Outlook as the user whose mailbox the private items are in. Click on File, Account Settings and then Delegate Access.

@@ -39,6 +39,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/11/server-server-local-admin-password-audit/
 ---
 A situation arose where I had to check all our Windows servers to see if any were using a particular local administrator password. I wrote the following script to allow me to test a dynamically generated set of credentials. It uses WMI because that allows specifying a particular set of credentials and is relatively lightweight in comparison to other tests.
 

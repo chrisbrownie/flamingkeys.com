@@ -26,6 +26,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/02/how-to-grant-administrators-full-control-over-all-mailboxes-in-an-organization/
 ---
 Granting administrative rights over all mailboxes to an Exchange administrator was a simple task in Exchange 2003 and 2007, which requires a little more consideration. I’ve written a simple PowerShell script that will allow you to automate this process. As new mailboxes are created, this script will add the appropriate permissions. Please note that this script will only work (by default) on Exchange 2010 SP2. If you’re running RTM or SP1, please remove the `-AutoMapping:$false` parameter.
 

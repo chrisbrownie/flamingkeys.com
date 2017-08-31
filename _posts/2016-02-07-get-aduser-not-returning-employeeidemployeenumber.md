@@ -26,5 +26,7 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2016/02/get-aduser-not-returning-employeeidemployeenumber/
 ---
 This one took longer than I care to admit to work out... Get-ADUser was returning blank values for EmployeeID/EmployeeNumber for all users. Very strange. Run PowerShell as Administrator to fix this.

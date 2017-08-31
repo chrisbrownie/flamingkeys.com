@@ -33,6 +33,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/03/bulk-convert-ad-groups/
 ---
 With the advent of Windows PowerShell, performing bulk tasks just gets easier and easier. Consider a scenario where you have a bunch of Domain Local groups that you need to convert to Global...or any other type of conversion. This is a task that can take a large amount of time to complete manually, even with copious amounts of coffee and House of Cards on the TV. Fortunately, a few lines of PowerShell can make short work of this.
 Consider the aforementioned Domain Local to Global conversion. As the astute reader will know, a Domain Local to Global conversion isn't a one-step process. Each group must first be converted to Universal. Why this caveat exists is far too detailed to discuss here, but Microsoft have a pretty ok writeup of it [here](https://technet.microsoft.com/en-us/library/cc755692(v=ws.10).aspx).

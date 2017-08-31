@@ -31,6 +31,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2016/07/customize-ad-fs-error-messages/
 ---
 
 ![]({{ site.baseurl }}/assets/adfs-invalid-username.png)

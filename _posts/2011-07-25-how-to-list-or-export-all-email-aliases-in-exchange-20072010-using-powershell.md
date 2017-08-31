@@ -35,6 +35,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/07/how-to-list-or-export-all-email-aliases-in-exchange-20072010-using-powershell/
 ---
 This one comes up quite often, so I figured I'd make a quick and easy script for it. The first step is to make sure you're on a machine with the Exchange Management Tools installed, and logged on as a user with privileges to read mailbox properties. If you don’t want to read the explanation, skip ahead to The Script.
 First, let’s create an empty array to store the results in:

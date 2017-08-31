@@ -31,6 +31,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2016/08/immutableid-azure-ad/
 ---
 Let's talk about ImmutableID.
 Immutable is a funny word. If you ask the dictionary, it'll tell you that it means something like "unchanging over time" or "unchangeable". If you ask Microsoft, prior to about 2014, they'd have agreed with these definitions.

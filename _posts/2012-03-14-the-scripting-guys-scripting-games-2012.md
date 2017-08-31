@@ -21,6 +21,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2012/03/the-scripting-guys-scripting-games-2012/
 ---
 If you’re into PowerShell, you know the Scripting Games are coming up in April. This is a great opportunity for those of any skillset to dive into the technology and write some fun scripts, with the added bonus of them being reviewed by a PowerShell celebrity! 
 

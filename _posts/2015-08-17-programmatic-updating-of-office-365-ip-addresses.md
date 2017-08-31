@@ -22,6 +22,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/08/programmatic-updating-of-office-365-ip-addresses/
 ---
 Any network admin who has dealt with Office 365 has been through the pain of parsing [this document](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) to try and allow access to Office 365 while maintaining network security and control. This is a less than fun experience, and the [RSS feed](http://go.microsoft.com/fwlink/p/?linkid=236301) providing updates isn't much good either.
 

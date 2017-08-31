@@ -43,6 +43,8 @@ excerpt: This afternoon I decided to install Windows Server 2008 R2 on one of my
   find any wireless networks. This was confusing for a few moments but then I realised
   my iPhone 4 and ASUS EeePC were connected and working fine over my apartment's WiFi
   connection...
+redirect_from: 
+  - /2010/09/server-2008-r2-wireless-on-laptop/
 ---
 This afternoon I decided to install Windows Server 2008 R2 on one of my laptops. Immediately it found most of the drivers, including my wireless network adapter. Fanatastic, says I. I was quickly lead to disappointment however as it could not find any wireless networks. This was confusing for a few moments but then I realised my iPhone 4 and ASUS EeePC were connected and working fine over my apartment's WiFi connection.
 

@@ -25,6 +25,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2016/08/enable-hsts-netscaler/
 ---
 HTTP Strict Transport Security, or HSTS, is a good way to help ensure visitors to your site do so using a secure connection. On top of this, it's a great way to ensure you get that all-important A+ score on Qualys.
 

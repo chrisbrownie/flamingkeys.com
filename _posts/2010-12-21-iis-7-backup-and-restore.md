@@ -35,6 +35,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2010/12/iis-7-backup-and-restore/
 ---
 
 With Exchange becoming only more integrated with Microsoft’s web server, [Internet Information Services](http://en.wikipedia.org/wiki/Internet_Information_Services), it is becoming a more and more critical service. One thing I’ve always wanted, but have never been satisfied with, is the backup and restore capabilities (or lack thereof) built into IIS. Apache is a very simple web server to back up, as everything is flat file. On the other hand, IIS uses a combination of the registry and file configuration. This is just a graphical approach to the "appcmd" functionality of IIS.

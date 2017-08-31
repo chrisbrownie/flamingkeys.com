@@ -22,6 +22,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2013/04/how-to-use-a-domain-controller-as-an-exchange-2013-dag-witness-server-dont/
 ---
 If you’re setting up Exchange 2013 in a lab, you may have a requirement to use a domain controller as a File Share Witness (FSW) host. 
 Obligatory disclaimer: While this is definitely not recommended practise in a production environment, and may have undesirable results, it will *probably* work. I highly doubt Microsoft support this, though I have been unable to find any concrete evidence on it (frankly, it’s such terrible practise they shouldn’t have to publicise advice against it). If you can come up with a method to avoid following this guide in production, I implore you to do so.

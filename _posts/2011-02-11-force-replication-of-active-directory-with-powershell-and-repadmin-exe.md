@@ -40,6 +40,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/02/force-replication-of-active-directory-with-powershell-and-repadmin-exe/
 ---
 
 Perhaps you’re creating a user for immediate use in another site. Perhaps you’ve updated a group membership and accidentally used a DC in the wrong site. Maybe you’re just lazy? One of the most fun (read: boring) parts of Active Directory cross-site administration is replication. Opening up Active Directory Sites & Services and mindlessly clicking _Replicate Now_ gets painful, and begs the question of "how can I do this faster?". Along came Polly…That is, if by Polly you mean repadmin.exe.

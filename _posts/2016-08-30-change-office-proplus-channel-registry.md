@@ -27,6 +27,8 @@ author:
   last_name: Brown
 excerpt: Changing the Office 365 ProPlus branch is easy using the registry, group
   policy, or the Office Customization Tool
+redirect_from:
+  - /2016/08/change-office-proplus-channel-registry/
 ---
 The [Office Customization Tool or Group Policy](https://technet.microsoft.com/en-au/library/mt455210.aspx) can be used to change the branch of Office 365 ProPlus between any of the options (Current, Deferred, First Release for Deferred). The following registry keys can be applied to allow this without needing to use either Group Policy or the OCT.
 Using regedit or PowerShell, open the path `HKLM\SOFTWARE\Policies\Microsoft\Office\16.0\Common\OfficeUpdate` and create the following values:

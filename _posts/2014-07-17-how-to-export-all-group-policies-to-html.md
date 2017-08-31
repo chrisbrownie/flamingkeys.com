@@ -17,6 +17,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2014/07/how-to-export-all-group-policies-to-html/
 ---
 Exporting all group policies to HTML is an arduous task at best...until you open up Windows PowerShell. No matter how counter-intuitive the `GroupPolicy` module for Windows Server may be, it's quite simple to export all GPOs:
 

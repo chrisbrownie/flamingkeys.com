@@ -33,6 +33,9 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/04/exchange-2010-mailboxes-over-size-limit-report/
+
 ---
 Here's a fairly rudimentary report I threw together this morning that will notify my HelpDesk staff of Exchange 2010 Mailbox users over their mailbox size limit. I didn't feel that formatting or any fancy xml/xsl was necessary for this particular job. The [KISS](http://en.wiktionary.org/wiki/KISS) principle is strongly in play here. Here it is:
 

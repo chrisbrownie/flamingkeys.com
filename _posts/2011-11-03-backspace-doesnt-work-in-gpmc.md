@@ -35,6 +35,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/11/backspace-doesnt-work-in-gpmc/
 ---
 This has been irritating me for a while, but never enough to actually look for a fix…until today. Turns out Microsoft released a KB article for this in February of this year: [KB2466373](http://support.microsoft.com/kb/2466373). This is a hotfix you need to request, but give MS your email address and expect a fix in less than a minute. This will fix the issue where backspace and arrow keys don’t work within MMC (but primarily GPMC and AGPM). 
 

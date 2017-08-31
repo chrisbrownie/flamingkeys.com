@@ -28,6 +28,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/08/teched-australia-2011/
 ---
 
 I’ll be heading along to [TechEd](http://australia.msteched.com/) on the Gold Coast this year. If you’re planning on attending, there will be a meetup for PowerShellers on Tuesday (details TBA). Hope to see you there! Please hit me up on Twitter ([@chrisbrownie](https://www.twitter.com/chrisbrownie)) if you’re coming, it would be great to meet some more likeminded folk.

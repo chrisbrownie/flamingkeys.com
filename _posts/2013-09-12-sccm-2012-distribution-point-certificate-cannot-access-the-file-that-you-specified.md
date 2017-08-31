@@ -23,6 +23,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2013/09/sccm-2012-distribution-point-certificate-cannot-access-the-file-that-you-specified/
 ---
 When trying to import a certificate into a SCCM 2012 distribution point, you may receive an error message: "Cannot access the file that you specified". This can occur even if you’ve specified a certificate on the local machine, and specified the correct password. It can even happen if you’re trying to change other configuration on a DP.
 

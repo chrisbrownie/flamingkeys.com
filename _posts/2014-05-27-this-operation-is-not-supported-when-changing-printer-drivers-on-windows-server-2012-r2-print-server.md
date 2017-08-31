@@ -28,6 +28,8 @@ author:
 excerpt: Consider a scenario where you have a Windows Server 2012 R2 print server.
   When attempting to change the driver associated with a particular printer, you receive
   an error.
+redirect_from:
+  - /2014/05/this-operation-is-not-supported-when-changing-printer-drivers-on-windows-server-2012-r2-print-server/
 ---
 Consider a scenario where you have a Windows Server 2012 R2 print server. When attempting to change the driver associated with a particular printer, you receive the following error:
 "Printer settings could not be saved. This operation is not supported."

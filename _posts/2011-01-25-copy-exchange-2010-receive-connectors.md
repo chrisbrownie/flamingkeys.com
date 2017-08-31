@@ -38,6 +38,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/01/copy-exchange-2010-receive-connectors/
 ---
 
 In deploying a new Exchange 2010 server I found myself needing to duplicate a receive connector with about 20 different IP entries. Being lazy (or as Terence called it; efficient), I started googling and found [this post](http://terenceluk.blogspot.com/2010/11/how-do-i-exportimport-exchange-20072010.html) by Terence Luk. His procedure works, but I figured there had to be a faster way. After a few minutes of fiddling I managed to compress his technique into this one-liner:

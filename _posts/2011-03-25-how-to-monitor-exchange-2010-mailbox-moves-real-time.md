@@ -37,6 +37,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2011/03/how-to-monitor-exchange-2010-mailbox-moves-real-time/
 ---
 
 I am in the middle of a large Exchange 2003 to Exchange 2010 migration. Moving a few large mailboxes at a time can be a time-consuming thing, especially when I don't know if the moves are complete. This little snippet allows me to keep an eye on a console window and see when various moves are complete.

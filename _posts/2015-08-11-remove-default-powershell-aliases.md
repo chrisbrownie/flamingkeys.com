@@ -23,6 +23,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/08/remove-default-powershell-aliases/
 ---
 PowerShell has a cheeky approach to cross-OS compatibility. Two of my favourite utilities; [wget](https://en.wikipedia.org/wiki/Wget), and [curl](https://en.wikipedia.org/wiki/CURL), are aliased to PowerShell's [Invoke-WebRequest](https://technet.microsoft.com/en-us/library/hh849901.aspx) cmdlet. This is nice and all, but `Invoke-WebRequest` doesn't work anything at all like curl or wget do, and sometimes I just want to be able to download a file without mucking around with parameters. Even after installing wget.exe and curl.exe into my path, PowerShell grabs ahold of the unqualified names (that is, no extension):
 

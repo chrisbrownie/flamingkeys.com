@@ -45,6 +45,8 @@ author:
 excerpt: With the inherent flaws (AKA features) offered by Apple’s new iPhone 4S with
   Siri, you may be required to block it from accessing your Exchange server via ActiveSync..
   Here's how!
+redirect_from:
+  - /2011/10/how-to-block-iphone-4s-from-connecting-to-exchange-2010/
 ---
 
 ## Siri, Tell Me About The Problem

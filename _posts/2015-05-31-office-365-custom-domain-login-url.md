@@ -20,6 +20,8 @@ author:
   display_name: Chris
   first_name: Chris
   last_name: Brown
+redirect_from:
+  - /2015/05/office-365-custom-domain-login-url/
 ---
 
 <aside class="aside-warn">Warning (August 2017): The guidance below is of questionable use now that Microsoft have started to roll out the new Azure AD sign-in experience which doesn't seem to honour the `?whr` querystring. YMMV!</aside>
