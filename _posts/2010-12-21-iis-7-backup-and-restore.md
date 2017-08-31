@@ -53,6 +53,6 @@ Inside the `<modules>` section of the same file, add the following line:
 {% endhighlight %}
 
 Restart IIS Manager and you’ll see the module here:
-![](https://www.flamingkeys.com/wp-content/uploads/2010/12/image.png)
+![]({{ site.cdnbaseurl }}wp-content/uploads/2010/12/image.png)
 
 One thing to note is that the module (at least graphically) does not give you the option to delete or rename the backups, so take a moment to decide on a naming convention. I’d suggest something like `Date – Action`. For example `2011-12-21-NewSSLCertificate`.

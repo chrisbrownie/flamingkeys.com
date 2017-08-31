@@ -42,6 +42,6 @@ This creates a new transport rule, and any message whose subject (or body) match
 
 When a user tries to send a message with only capitals in the title, the following is returned. Note the 5.7.111 "Do not use a capitalised" subject bounce message.
 
-![](https://www.flamingkeys.com/wp-content/uploads/2012/05/image4.png)
+![]({{ site.cdnbaseurl }}wp-content/uploads/2012/05/image4.png)
 
 This is obviously not something I recommend deploying in production, but it does show how easy it is to evaluate message bodies and subjects using regular expressions.
