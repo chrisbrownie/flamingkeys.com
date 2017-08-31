@@ -36,5 +36,6 @@ author:
   first_name: Chris
   last_name: Brown
 ---
-This has been irritating me for a while, but never enough to actually look for a fix…until today. Turns out Microsoft released a KB article for this in February of this year: <a href="http://support.microsoft.com/kb/2466373" target="_blank">KB2466373</a>. This is a hotfix you need to request, but give MS your email address and expect a fix in less than a minute. This will fix the issue where backspace and arrow keys don’t work within MMC (but primarily GPMC and AGPM). Here’s the link to the hotfix:
-<a href="http://support.microsoft.com/kb/2466373">http://support.microsoft.com/kb/2466373</a>
+This has been irritating me for a while, but never enough to actually look for a fix…until today. Turns out Microsoft released a KB article for this in February of this year: [KB2466373](http://support.microsoft.com/kb/2466373). This is a hotfix you need to request, but give MS your email address and expect a fix in less than a minute. This will fix the issue where backspace and arrow keys don’t work within MMC (but primarily GPMC and AGPM). 
+
+Here’s the link to the hotfix: [http://support.microsoft.com/kb/2466373](http://support.microsoft.com/kb/2466373).

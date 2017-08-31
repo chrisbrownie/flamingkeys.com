@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/chrisbrown
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://flamingkeys.com
+  * I am chrisbrown (https://keybase.io/chrisbrown) on keybase.
+  * I have a public key with fingerprint B26B 77E4 0015 7D6B F2CF  E5F4 C00F 704D F58F 7BBB
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01206b4645f40a02ce8c88b28a101b4515ba4d94a564f3ca543a6168d18e296001500a",
+            "fingerprint": "b26b77e400157d6bf2cfe5f4c00f704df58f7bbb",
+            "host": "keybase.io",
+            "key_id": "c00f704df58f7bbb",
+            "kid": "01016a968bd40a01854d3099d918721f9fac57019445a334fb3783c98526c6967c6d0a",
+            "uid": "5b9b909d5c24f90ccb0deae3f68b7319",
+            "username": "chrisbrown"
+        },
+        "revoke": {
+            "sig_ids": [
+                "8c074618aebde293f45434530fa54099217f5f4841813da662e6389aabc023940f"
+            ]
+        },
+        "service": {
+            "hostname": "flamingkeys.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1484014786,
+    "expire_in": 157680000,
+    "prev": "b4917e7c59a3e2288df688d1ea463e54ae2c70023154fc6da5d1b17ca40f376f",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.61
+Comment: https://keybase.io/crypto
+
+yMO3AnicbZJ7UBVVHMd5XVQGhZxGCl8z6yPnwuA5u2fP7t5q0kBSy5rR1CSZ6zm7
+Z2EF7r3uvYBEpGBhIQ6vrPHtqP/kA4GSwbQUxtcoagrjIPiIxrJIZzCSZDTtLKP/
+tf/s7Dm/3/f7+X33d3J0ZFhM+Im4wIIHVcVHw8+3DuWHfRBKaysWqN8oEjzFQg4b
+frFcgwVD3hzLEDwCgCLAFGEkmwgQIOpM1VWViiqBAFIkQ5kSZGiIyBiZkk5kJBEM
+sWpAlYkaBgDKABAhWTAtXxazA7blC3FZKmKqKAw594qBqSnqJuMWOgCmApBhyqqp
+UEp5Y7Y/6HRwOEqCLMXy8zP+4R3G+5/659wAYqJhlRoON1RlZEhA0wwNqooITc0k
+uqwAqCEkE0lCJpUUVdI1VRaxjjWs6NgY5s4flpOpRjWgGbIuIlMDuk6BwQiTTG6g
+SFBzCoPM9pE85lBl21aQ2v5Cn1CSLNiswJ/DnGSDVhbHDgqeDwVVBwrCUCWMGjwo
+yUQ8OSRLwOQRck4RKibPQ0VQhZJBMBYZllSNEKoDUdIQMIVMrs09Cyx9WNzJ6Zm/
+mUvyeNw8pWCK7s/jcAHbH/Lr/lx+mR0KBYIeByxUFHCqCxn1PtPxUstn8E7eUcDs
+oOX3CR7IK/WQ5QhDzgMgUlScLLDVActmXsupkBWsAv44PqzA+b1IgwpTdFkjEhNF
+VTV4UHwnGEFYYjIiTNQVwAeBMjJ50kQ2IIWKTvhckoJNwZlslc/PtSXOSbK4Jg/P
+R0L5NhNK2lqXR4WFx4RFuyKcDQ6LGRX/fK9be+Oe5u7s3HQ7dn5nauKJ32mE2bXg
+4tRxbZtfaxkzp857bHXJ7Yc9t6zYhfTNlvE76Obf3MfL1j1Z4d45sz1q4s07jzqE
+2sa4wJI5BYnje2f1h153Nb4dLNOmTF4ztX5uTubpfRuzFd/isr6MphtHahPqb7gj
+5uxQX3kjPT+9K/nq97sONXVv6ai7+2jbzAQ4Kymp5teBR6fdNQfOLN2U+umpso9c
++xtiP6ltvPLHnfh/Ryyzv9rtdndufXq4WbzZ/6c8rXxxy6X3wSz23ei69kUjV64c
+Z/Q2bLmT6El4/ELL4XMH6e7U/oXXY+iFhPaXtNyspubPkq//3Hsmf2HUN1nT29Am
+Q3ENXD5YNfbvRTu6tu4r7fvWO2l238hTa8a0LVNG7V9XVBWeN/F++YvzCudP74mc
+cax69ss799SvGUiPnrexD647Mfqvt1b9NDQtfrlndXnS1d6k2lvd609OzrC3u/5Z
+cX5bzeDR9KvheG3igPfcYPWkJbHuih/aS7rXPrjZake3lH9e93DlvXd70i6E+fCW
+0vL3JFfDIPQ//jG6sCFS+fLIO3NLKz+uvNYb45mw3XRZXV9fmlDc/0XClLy0zBkR
+k1xn7+aVXVl7f3Aw/UHcBqHi1Vuhmo5xx9PuF/aEp0jw8rXbeHH9afKkdFd1c2pG
+9aHQvUtnt59X905cenDE3sd7pg1Nbjh0MXr92QOZFZVjf+mO/A9Owt5F
+=KG7w
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/chrisbrown
+
+==================================================================
