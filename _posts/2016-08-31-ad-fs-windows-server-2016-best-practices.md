@@ -34,7 +34,7 @@ author:
   last_name: Brown
 ---
 Active Directory Federation Services has come a long way since humble beginnings in Server 2003 with AD FS 1.0. Now available on Windows Server 2016, Microsoft have taken big steps to allow for customization and versatility of the product. There's a lot you can change, and I'll attempt to summarise my list of recommended changes below. This is by no means an exhaustive list, but it's a good place to start for any new deployment.
-If you're using Windows Server 2012 R2, you'll want the [AD FS 3 Best Practices](https://flamingkeys.com/2015/06/ad-fs-3-best-practices/) post.
+If you're using Windows Server 2012 R2, you'll want the [AD FS 3 Best Practices](/ad-fs-3-best-practices/) post.
 
 ## Ensure AD FS Farm Behavior Level is set to the highest possible level
 
@@ -59,7 +59,7 @@ Get-AdfsProperties | Select CurrentBehaviorLevel
 
 ## Enable Keep Me Signed In (KMSI)
 
-This will allow your users to receive cookies that last longer than the single session. I've written a step-by-step [here](https://flamingkeys.com/2015/06/enable-keep-me-signed-in-for-ad-fs-3-0/).
+This will allow your users to receive cookies that last longer than the single session. I've written a step-by-step [here](/enable-keep-me-signed-in-for-ad-fs-3-0/).
 
 ## Enable End User Password Change
 

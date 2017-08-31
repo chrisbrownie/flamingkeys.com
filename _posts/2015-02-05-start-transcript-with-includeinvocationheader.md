@@ -35,7 +35,7 @@ While tinkering with PowerShell in the new build 9926 of Windows 10, I've inve
 
 In the new build of Windows, there's an additional (as yet [undocumented](https://msdn.microsoft.com/en-us/library/microsoft.powershell.commands.starttranscriptcommand.includeinvocationheader(v=vs.85).aspx)) switch parameter for this cmdlet: `-IncludeInvocationHeader`.
 
-![](https://flamingkeys.com/wp-content/uploads/2015/02/2015-02-06-09_07_32-StartTranscriptCommand.IncludeInvocationHeader-Property-Microsoft.PowerShell.Co_.png)
+![]({{ site.cdnbaseurl }}wp-content/uploads/2015/02/2015-02-06-09_07_32-StartTranscriptCommand.IncludeInvocationHeader-Property-Microsoft.PowerShell.Co_.png)
 
 If you append this switch when running `Start-Transcript`, you'll see the outputted text file differs ever so slightly. Before each entered command, the transcript function prepends a timestamp `Command start time: yyyyMMddhhmmss`. This is a great method for always timing command execution should you wish to come back at a later stage and refer to its performance.
 

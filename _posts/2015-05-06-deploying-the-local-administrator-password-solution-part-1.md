@@ -90,5 +90,5 @@ Once installed, you'll see the *Local Administrator Password Solution* appear in
 
 ## What Else?
 
-* [See part 2 for configuring Active Directory](https://flamingkeys.com/2015/05/deploying-the-local-administrator-password-solution-part-2/) 
-* [See part 3 for configuring Group Policy and operating LAPS](https://flamingkeys.com/2015/05/deploying-the-local-administrator-password-solution-part-3/)
+* [See part 2 for configuring Active Directory](/deploying-the-local-administrator-password-solution-part-2/) 
+* [See part 3 for configuring Group Policy and operating LAPS](/2015/05/deploying-the-local-administrator-password-solution-part-3/)

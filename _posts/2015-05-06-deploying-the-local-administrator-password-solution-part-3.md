@@ -63,5 +63,5 @@ Well, that's that! There's not much more to do. If you want to add more OUs or 
 
 # What Else?
 
-* [See part 1 for installing LAPS](https://flamingkeys.com/2015/05/deploying-the-local-administrator-password-solution-part-1/) 
-* [See part 2 for configuring Active Directory](https://flamingkeys.com/2015/05/deploying-the-local-administrator-password-solution-part-2/)
+* [See part 1 for installing LAPS](/deploying-the-local-administrator-password-solution-part-1/) 
+* [See part 2 for configuring Active Directory](/deploying-the-local-administrator-password-solution-part-2/)

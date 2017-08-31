@@ -30,11 +30,11 @@ author:
   first_name: Chris
   last_name: Brown
 ---
-Active Directory Federation Service has come a long way since humble beginnings in Server 2003 with AD FS 1.0\. Now at version 3.0 on Windows Server 2012 R2, Microsoft have taken big steps to allow for customisation and versatility of the product. There's a lot you can change, and I'll attempt to summarise my list of recommended changes below. This is by no means an exhaustive list, but it's a good place to start for any new deployment. Running Windows Server 2016? You probably want [AD FS for Windows Server 2016 Best Practices](https://flamingkeys.com/2016/08/ad-fs-windows-server-2016-best-practices/).
+Active Directory Federation Service has come a long way since humble beginnings in Server 2003 with AD FS 1.0\. Now at version 3.0 on Windows Server 2012 R2, Microsoft have taken big steps to allow for customisation and versatility of the product. There's a lot you can change, and I'll attempt to summarise my list of recommended changes below. This is by no means an exhaustive list, but it's a good place to start for any new deployment. Running Windows Server 2016? You probably want [AD FS for Windows Server 2016 Best Practices](/ad-fs-windows-server-2016-best-practices/).
 
 ## Enable Keep Me Signed In (KMSI)
 
-This will allow your users to receive cookies that last longer than the single session. I've written a step-by-step [here](https://flamingkeys.com/2015/06/enable-keep-me-signed-in-for-ad-fs-3-0/).
+This will allow your users to receive cookies that last longer than the single session. I've written a step-by-step [here](/enable-keep-me-signed-in-for-ad-fs-3-0/).
 
 ## Enable End User Password Change
 

@@ -63,5 +63,5 @@ By default, the vast majority of Active Directory computer object properties ca
 
 # What Else?
 
-* [See part 1 for installing LAPS](https://flamingkeys.com/deploying-the-local-administrator-password-solution-part-1/) 
-* [See part 3 for configuring Group Policy and operating LAPS](https://flamingkeys.com/deploying-the-local-administrator-password-solution-part-3/)
+* [See part 1 for installing LAPS](/deploying-the-local-administrator-password-solution-part-1/) 
+* [See part 3 for configuring Group Policy and operating LAPS](/deploying-the-local-administrator-password-solution-part-3/)

@@ -36,8 +36,8 @@ In case you haven't yet customised your Azure AD - [what are you waiting for](ht
 
 Hot: 
 
-![](https://flamingkeys.com/wp-content/uploads/2015/05/readify.png)
+![]({{ site.cdnbaseurl }}wp-content/uploads/2015/05/readify.png)
 
 Not:
 
-![](https://flamingkeys.com/wp-content/uploads/2015/05/logindefault.png)
+![]({{ site.cdnbaseurl }}wp-content/uploads/2015/05/logindefault.png)
