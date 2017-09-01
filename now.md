@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Now
+title: What I'm Doing Now
 permalink: /now/
 ---
-
-# What I'm Doing Now
 
 I'm always busy with something or other. Here's what I'm currently looking at:
 
