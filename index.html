@@ -2,10 +2,35 @@
 layout: default 
 ---
 
-{% for post in site.posts %}
-<div class="row">
-  <div class="col-2 post-date">{{ post.date | date_to_string }}</div>
-  <div class="col post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+<div data-spy="scroll" data-target="#navbar-primary" data-offset="0">
+  <h4 id="blog">Blog Entries</h4>
+  {% for post in site.posts %}
+  <div class="row">
+    <div class="col-2 post-date">{{ post.date | date_to_string }}</div>
+    <div class="col post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+  </div>
+  {% endfor %}
+  <h4 id="now">Now</h4>
+  <p>I'm always busy with something or other. Here's what I'm currently looking at:</p>
+  <h5><a href="https://github.com/chrisbrownie/cartracker">CarTracker</a></h5>
+  <p>This is a project I'm working on to meet my requirements for the Australian Tax Office's car...stuff. I need to record my odometer reading and distance travelled on all work trips. Being as lazy as I am, I'm putting together a little technical solution to save me 5 seconds at the start and end of each trip. Basically it's a GPS + Raspberry Pi + 4G Modem + AWS coolness combo. </p>
+  <h5><a href="https://github.com/chrisbrownie/flamingkeys.com">FlamingKeys.com</a></h5>
+  <p>I have an ongoing project to move this blog from its old WordPress installation across to a new shiny Github Pages-hosted Jekyll <em>thing</em>.</p>
+  <h4 id="about">About</h4>
+  <p>My name is Chris Brown. I work as a systems engineer in Melbourne, 
+    Australia, dealing with Office 365 and Microsoft/Amazon's public cloud 
+    products. My long-standing passion is the automation of everything. In my 
+    spare time, I like to write code and fly planes.</p>
+  <p> I've been in IT for almost 10 years, and in that time have worked 
+    primarily with Microsoft Windows, focussing on Active Directory and Exchange 
+    Server. The last few years have seen my focus shift 
+    <a href="https://www.youtube.com/watch?v=jR6xbulUmsg&t=6s" target="_blank">to the cloud</a>.</p>
+    <p>In my spare time, I fly little planes around the Melbourne area. My 
+      current goals are to achieve my aerobatics and formation endorsements. 
+      <!--
+        ## Find Me * Email: [{{ site.footer-links.email }}](mailto:{{ site.footer-links.email }}) * Twitter: [@{{
+  site.footer-links.twitter }}]({{ site.footer-links.twitter }}) * Blog: [{{ site.footer-links.blog }}]({{ site.footer-links.blog
+  }}) * GitHub: [{{ site.footer-links.github }}](https://github.com/{{ site.footer-links.github }}) * Instagram: [@{{ site.footer-links.instagram
+  }}](https://instagram.com/{{ site.footer-links.instagram }})
+-->
 </div>
-{% endfor %}
-
