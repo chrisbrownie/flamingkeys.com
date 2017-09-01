@@ -61,6 +61,6 @@ P.S. here’s how to get the AD computer account name as well. Doesn’t deserve
 
 
 (This one just returns the whole keychain item and looks for the first line containing "Acct". It then removes all the useless info around the outside of the computer name.
-<aside class="aside-info">Update: Thanks to commenter Joshua for this easier/safer/cleaner methord for finding the computer name:
+<div class="alert alert-info" role="alert">Update: Thanks to commenter Joshua for this easier/safer/cleaner methord for finding the computer name:
     dsconfigad -show | sed -n 's/Computer.Account\ \{17\}=\ //p'
-</aside>
+</div>

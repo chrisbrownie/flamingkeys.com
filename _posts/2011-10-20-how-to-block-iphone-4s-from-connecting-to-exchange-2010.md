@@ -83,7 +83,7 @@ What does this do?
 | Remove-ActiveSyncDevice | Remove the devices
 | -confirm:$false | Don’t prompt for confirmation (we want this to be automated!)
 
-<aside class="aside-error">Keep in mind any typos here could be devastating, so make sure you only add the `–confirm:$false` argument once you’ve tested and confirmed this works for you.</aside>
+<div class="alert alert-danger">Keep in mind any typos here could be devastating, so make sure you only add the `–confirm:$false` argument once you’ve tested and confirmed this works for you.</div>
 
 After running this script, I sat content that iPhone 4S devices would would be blocked from my Exchange environment. However it occurred to me over lunch, whilst eating my quiche, that devices could simply re-join themselves to Exchange! On to plan B (Well.. Plan A, part 2):
 

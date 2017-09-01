@@ -49,4 +49,4 @@ I’ve yet to spend any serious time testing this, but this is a pretty remarkab
 
 What do you think? 
 
-<aside class="aside-info">Update: [Dave Stork](https://twitter.com/dmstork) has dug a lot deeper than I [in his blog post](http://blogs.dirteam.com/blogs/davestork/archive/2012/03/01/yes-there-is-activesync-in-windows-8.aspx) - go have a read!</aside>
+<div class="alert alert-info" role="alert">Update: [Dave Stork](https://twitter.com/dmstork) has dug a lot deeper than I [in his blog post](http://blogs.dirteam.com/blogs/davestork/archive/2012/03/01/yes-there-is-activesync-in-windows-8.aspx) - go have a read!</div>

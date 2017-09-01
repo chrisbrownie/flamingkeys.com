@@ -24,7 +24,7 @@ redirect_from:
   - /2015/05/office-365-custom-domain-login-url/
 ---
 
-<aside class="aside-warn">Warning (August 2017): The guidance below is of questionable use now that Microsoft have started to roll out the new Azure AD sign-in experience which doesn't seem to honour the `?whr` querystring. YMMV!</aside>
+<div class="alert alert-warning" role="alert">Warning (August 2017): The guidance below is of questionable use now that Microsoft have started to roll out the new Azure AD sign-in experience which doesn't seem to honour the `?whr` querystring. YMMV!</div>
 
 Consider a scenario where you've configured custom branding for your Windows Azure Active Directory login URL at `https://login.microsoftonline.com`. The custom branding doesn't show up until a user's entered their username and hit tab, and then the images have loaded, by which point they're probably most of the way through typing their password anyway. If you want to deploy links on an intranet or to browser favourites or anything like that to send users directly to your Office 365 custom branding, you'll likely want to have that custom branding in place from the get-go. I struggled a little to find this, but eventually found application guidance here on the [TechNet Active Directory Team Blog](http://blogs.technet.com/b/ad/archive/2015/02/11/how-to-use-azure-ad-to-land-users-on-their-custom-login-page-from-within-your-app.aspx).
 

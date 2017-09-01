@@ -28,7 +28,7 @@ redirect_from:
 If you’re setting up Exchange 2013 in a lab, you may have a requirement to use a domain controller as a File Share Witness (FSW) host. 
 Obligatory disclaimer: While this is definitely not recommended practise in a production environment, and may have undesirable results, it will *probably* work. I highly doubt Microsoft support this, though I have been unable to find any concrete evidence on it (frankly, it’s such terrible practise they shouldn’t have to publicise advice against it). If you can come up with a method to avoid following this guide in production, I implore you to do so.
 
-<aside class="aside-error">Do not do this in production!</aside>
+<div class="alert alert-danger">Do not do this in production!</div>
 
 The File Share Witness is used as the winning vote when your DAG has an even number of hosts – the same principle as the quorum drive in a Failover Cluster. This is a file server that all DAG members can read and write (but cannot be a DAG member for obvious reasons).
 If you just try to create a DAG and use a domain controller as a FSW, you’ll get this error message:
@@ -55,7 +55,7 @@ Now comes the bit that makes the security part of me cringe. Exchange Trusted Su
 
 What you’ve done here is made every Exchange server a domain admin. This means that anything running in the context of an Exchange server computer’s user account (`E15MB1$`, `E15MB2$`, etc.) has full rights over the domain. 
 
-<aside class="aside-error">Do not do this in production!</aside>
+<div class="alert alert-danger">Do not do this in production!</div>
 
 After giving your DC a reboot (to update its security group membership), **Exchange Trusted Subsystem **will be able to create shares on it, and your DAG will be able to be created successfully:
 
@@ -63,4 +63,4 @@ After giving your DC a reboot (to update its security group membership), **Excha
 
 Add some member servers and Bob’s your uncle. Did I mention don't do this in production?
 
-<aside class="aside-error">Do not do this in production!</aside>
+<div class="alert alert-danger">Do not do this in production!</div>

@@ -47,7 +47,7 @@ Consider the following scenario:
 
 This user's UPN has been generated based on her sAMAccountName, and it doesn't match her email address. She has no knowledge of what a UPN is, or when it should be used, and it doesn't make sense to educate on this. In this case, we should update Kim's UPN to be `kim.akers@margiestravel.com`, thus matching her email address.
 
-<aside class="aside-info">Protip: Skip to the bottom for the tl;dr and script.</aside>
+<div class="alert alert-info" role="alert">Protip: Skip to the bottom for the tl;dr and script.</div>
 
 We could write a script to update everyone's UPNs to `First.Last@margiestravel.com`...or we could be a little more clever. Everyone's email address is stored in AD, why don't we just update their UPNs to that?
 
@@ -78,7 +78,7 @@ Get-ADUser $user -Properties proxyAddresses | Select-Object -Expand proxyAddres
 * [Where-Object](https://technet.microsoft.com/en-au/library/ee177028.aspx) allows us to filter the results
 * `-clike` performs a case-sensitive like statement, where `*` is the wildcard character
 
-<aside class="aside-info"> I know I can do this using the *mail* property, but I like to assume it's incorrect for any number of possible reasons. Exchange honours the `proxyAddresses` value, so we will too.</aside>
+<div class="alert alert-info" role="alert"> I know I can do this using the *mail* property, but I like to assume it's incorrect for any number of possible reasons. Exchange honours the `proxyAddresses` value, so we will too.</div>
 
 Great, now let's clean it up a bit and remove the protocol specifier at the start:
 

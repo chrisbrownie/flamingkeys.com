@@ -38,7 +38,7 @@ If you've set up AD FS before, you've probably seen this drop-down list that all
 Using the theming capabilities of AD FS 3.0, we can introduce some JavaScript that removes applications from the list as the page is loaded.
 I am *not* a web guy by any means, so my JavaScript isn't great...but it works. Happy to accept corrections from anyone better than this at me.
 
-<aside class="aside-info">Update, 3 Nov 2015: Like clockwork, someone's come up with a better option! Thanks to ![Andrew in the comments](/how-to-hide-a-relying-party-from-ad-fs-3-0/#comment-2339319804) for his great solution, it's a lot more slick than my initial approach.</aside>
+<div class="alert alert-info" role="alert">Update, 3 Nov 2015: Like clockwork, someone's come up with a better option! Thanks to ![Andrew in the comments](/how-to-hide-a-relying-party-from-ad-fs-3-0/#comment-2339319804) for his great solution, it's a lot more slick than my initial approach.</div>
 
 1. Create a custom theme:
   {% highlight powershell %}

@@ -42,7 +42,7 @@ author:
 redirect_from:
   - /2011/11/telstra-4g-usb-a-week-in-review/
 ---
-<aside class="aside-info">This is a repost of my [original post on AuTechHeads](http://www.autechheads.com/blogs/entryid/428/telstra-4g-usb-a-week-in-review)</aside>
+<div class="alert alert-info" role="alert">This is a repost of my [original post on AuTechHeads](http://www.autechheads.com/blogs/entryid/428/telstra-4g-usb-a-week-in-review)</div>
 
 4G. It's like 3G..but plus one, right? Well actually, closer to "times ten" but we'll get to that. Telstra have, to somewhat less fanfare than I'd expected, released their new 4G (Long Term Evolution, or LTE) network to anyone lucky enough to live in or around a capital CBD, capital airport or "selected regional" areas.
 
@@ -87,4 +87,4 @@ All round, it's a great device, and I will certainly not be looking for a replac
 
 \- Posted from Melbourne Central shopping centre via my Telstra 4G USB.
 
-<aside class="aside-warning">Disclaimer: I have been given a 4G USB Device by Telstra free of charge to review. The comments expressed by me reflect my own experience and personal opinion and are not made on behalf of Telstra.</aside>
+<div class="alert alert-warning" role="alert">Disclaimer: I have been given a 4G USB Device by Telstra free of charge to review. The comments expressed by me reflect my own experience and personal opinion and are not made on behalf of Telstra.</div>

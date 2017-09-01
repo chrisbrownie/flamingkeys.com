@@ -30,9 +30,9 @@ author:
 redirect_from:
   - /2013/01/how-to-perform-an-unattended-install-of-the-sccm-2012-client-on-mac-os-x/
 ---
-<aside class="aside-warning">
+<div class="alert alert-warning" role="alert">
 I'm aware this method is not working for the latest version of the client. When I have a Mac available to me I will update this post.
-</aside>
+</div>
 
 Installing the Configuration Manager client on Mac OS X is a new feature of SCCM 2012 SP1. Unfortunately the installation process is nowhere near as easy as installing for a PC. The steps go something like this:
 
@@ -85,4 +85,4 @@ As you can see, the majority of the operation is performed server-side, which me
 * `userAgent` is a string presented to the web server when downloading files
 * `workingDirectory` defines where on the client files will be placed while installing the SCCM client. The script will create this folder if it does not exist. The default is `~/CMInstallTemp`
 
-<aside class="aside-info">You can [download a zip file](http://www.flamingkeys.com/wp-content/uploads/2013/01/MacClient.zip) of the script and text files ready to go. You’ll just have to grab the DMG file from your SCCM 2012 SP1 install media and place it on your web server with them.</aside>
+<div class="alert alert-info" role="alert">You can [download a zip file](http://www.flamingkeys.com/wp-content/uploads/2013/01/MacClient.zip) of the script and text files ready to go. You’ll just have to grab the DMG file from your SCCM 2012 SP1 install media and place it on your web server with them.</div>

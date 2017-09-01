@@ -28,8 +28,8 @@ redirect_from:
 When trying to connect an archive mailbox in Exchange 2010, you may receive an error
 > The legacy DN ‘/O=ORG/OU=FIRST ADMINISTRATIVE GROUP/CN=RECIPIENTS/CN=KIM.AKERS’ of disconnected mailbox does not match user legacy dn ‘O=ORG/OU=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=Kim.Akerts639’.
 
-<aside class="aside-warning">
-This article contains instructions on using ADSIEdit and PowerShell to perform tasks that could endanger the livelihood of your Active Directory and Exchange environments. If you don’t know what ADSI, DN, OU and CN stand for (and what they do), I don’t recommend proceeding beyond here!**</aside>
+<div class="alert alert-warning" role="alert">
+This article contains instructions on using ADSIEdit and PowerShell to perform tasks that could endanger the livelihood of your Active Directory and Exchange environments. If you don’t know what ADSI, DN, OU and CN stand for (and what they do), I don’t recommend proceeding beyond here!**</div>
 
 This is, in most instances, because the original user was created on in an Exchange 2003 administrative group and the new user was created on Exchange 2010 (or, presumably, 2007). 
 

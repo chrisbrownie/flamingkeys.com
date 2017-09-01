@@ -51,7 +51,7 @@ Get-Mailbox -ResultSize:unlimited | Get-MailboxRegionalConfiguration | Where-Obj
 Get-Mailbox -ResultSize:unlimited | Get-MailboxRegionalConfiguration | Group-Object Language
 {% endhighlight %}
 
-<aside class="aside-warning">You'll note several occurrences of "probably" in this post. This is because some lovely Exchange Server admins like to preset regional settings for users as part of user deployment. This is a wonderful idea, and I strongly encourage it. Unfortunately, however, it breaks everything discussed above.</aside>
+<div class="alert alert-warning" role="alert">You'll note several occurrences of "probably" in this post. This is because some lovely Exchange Server admins like to preset regional settings for users as part of user deployment. This is a wonderful idea, and I strongly encourage it. Unfortunately, however, it breaks everything discussed above.</div>
 
 ## Cmdlets used in this post
 
