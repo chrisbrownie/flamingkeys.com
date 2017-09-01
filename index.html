@@ -2,11 +2,10 @@
 layout: default 
 ---
 
-<div class="posts">
-
-  <ul class="posts">
-    {% for post in site.posts %}
-    <li><span class="post-date">{{ post.date | date_to_string }} :: </span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+{% for post in site.posts %}
+<div class="row">
+  <div class="col-2 post-date">{{ post.date | date_to_string }}</div>
+  <div class="col post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 </div>
+{% endfor %}
+
