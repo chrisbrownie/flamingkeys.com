@@ -10,14 +10,6 @@ I've been in IT for almost 10 years, and in that time have worked primarily with
 
 In my spare time, I fly little planes around the Melbourne area. My current goals are to achieve my aerobatics and formation endorsements.
 
-## Things I'm playing with
-
-There's always something interesting happening. Here's what I'm playing with at the moment:
-
-### [CarTracker](https://github.com/chrisbrownie/cartracker)
-
-This is a project I'm working on to meet my requirements for  the Australian Tax Office's car...stuff. I need to record my odometer reading and distance travelled on all work trips. Being as lazy as I am, I'm putting together a little technical solution to save me 5 seconds at the start and end of each trip. Basically it's a GPS + Raspberry Pi + 4G Modem + AWS coolness combo.
-
 ## Find Me
 
 * Email: [{{ site.footer-links.email }}](mailto:{{ site.footer-links.email }})
@@ -25,4 +17,3 @@ This is a project I'm working on to meet my requirements for  the Australian Tax
 * Blog: [{{ site.footer-links.blog }}]({{ site.footer-links.blog }})
 * GitHub: [{{ site.footer-links.github }}](https://github.com/{{ site.footer-links.github }})
 * Instagram: [@{{ site.footer-links.instagram }}](https://instagram.com/{{ site.footer-links.instagram }})
-* Flickr: [chrisbrowniephotos](https://www.flickr.com/photos/cjbrownie/)
