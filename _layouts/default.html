@@ -48,5 +48,22 @@
     </div>
 
     {% include analytics.html %}
+    <script>
+      $( document ).ready(function() {
+        // Open external links (i.e. anything fully qualified) in a new tab
+        $(document).ready(function () {
+          $("a[href^='http://'").click(function () {
+            window.open($(this).attr('href'));
+            return false;
+          })
+
+          $("a[href^='https://'").click(function () {
+            window.open($(this).attr('href'));
+            return false;
+          })
+        });
+
+      });
+      </script>
   </body>
 </html>
