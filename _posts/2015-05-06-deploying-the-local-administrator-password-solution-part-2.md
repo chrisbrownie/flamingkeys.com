@@ -47,21 +47,27 @@ In the last post, we configured the client installation. While there is no serve
 *   ms-MCS-AdmPwd - this attribute stores the password itself
 *   ms-MCS-AdmPwdExpirationTime - this attribute stores the time after which the computer's password should be changed
 
-In part 1, you would've installed the LAPS management tools onto a computer. Connect to this computer as a member of the *Schema Admins* Active Directory group. Open an elevated Windows PowerShell prompt and import the AdmPwd.PS module: ![AD-1]({{ site.baseurl }}/assets/AD-1.png) Once imported, you must extend the AD schema using the `Update-AdmPwdADSchema` cmdlet: ![AD-2]({{ site.baseurl }}/assets/AD-2.png)
+In part 1, you would've installed the LAPS management tools onto a computer. Connect to this computer as a member of the *Schema Admins* Active Directory group. Open an elevated Windows PowerShell prompt and import the AdmPwd.PS module: 
+
+![AD-1]({{ site.baseurl }}/assets/AD-1.png) 
+
+Once imported, you must extend the AD schema using the `Update-AdmPwdADSchema` cmdlet: 
+
+![AD-2]({{ site.baseurl }}/assets/AD-2.png)
 
 ## Configure Active Directory Permissions
 
 By default, the vast majority of Active Directory computer object properties can be read by any user with Domain Users privileges or above. If we're storing local administrator passwords, this isn't necessarily a desired situation. Let's dig into AD and restrict who can actually view this newly created ms-Mcs-AdmPwd attribute:
 
 1.  Open ADSIEdit.msc
-2.  Right click the ADSI Edit node and choose *Connect to...*. ![AD-3]({{ site.baseurl }}/assets/AD-3.png)
-3.  Ensure *Default naming context* is selected and click **OK** ![AD-4]({{ site.baseurl }}/assets/AD-4.png)
-4.  Drill down the tree to find the organizational unit that contains your computer objects ![AD-5]({{ site.baseurl }}/assets/AD-5.png)
-5.  Right click the OU and select Properties ![AD-6]({{ site.baseurl }}/assets/AD-6.png)
-6.  On the *Security* tab, choose **Advanced** ![AD-7]({{ site.baseurl }}/assets/AD-7.png)
-7.  For each non-administrative group that currently has it checked (if any), remove the *All extended rights* permission: ![AD-8]({{ site.baseurl }}/assets/AD-8.png)
-8.  Next, grant computers the ability to update their password attribute using `Set-AdmPwdComputerSelfPermission` ![AD-9]({{ site.baseurl }}/assets/AD-9.png)
-9.  Now it's time to grant rights to users to allow them to retrieve a computer's password. I'm going to use two different groups for this, one for servers and one for clients: ![AD-10]({{ site.baseurl }}/assets/AD-10.png)
+2.  Right click the ADSI Edit node and choose *Connect to...*. <br />![AD-3]({{ site.baseurl }}/assets/AD-3.png)
+3.  Ensure *Default naming context* is selected and click **OK** <br />![AD-4]({{ site.baseurl }}/assets/AD-4.png)
+4.  Drill down the tree to find the organizational unit that contains your computer objects <br />![AD-5]({{ site.baseurl }}/assets/AD-5.png)
+5.  Right click the OU and select Properties <br />![AD-6]({{ site.baseurl }}/assets/AD-6.png)
+6.  On the *Security* tab, choose **Advanced** <br />![AD-7]({{ site.baseurl }}/assets/AD-7.png)
+7.  For each non-administrative group that currently has it checked (if any), remove the *All extended rights* permission: <br />![AD-8]({{ site.baseurl }}/assets/AD-8.png)
+8.  Next, grant computers the ability to update their password attribute using `Set-AdmPwdComputerSelfPermission` <br />![AD-9]({{ site.baseurl }}/assets/AD-9.png)
+9.  Now it's time to grant rights to users to allow them to retrieve a computer's password. I'm going to use two different groups for this, one for servers and one for clients: <br />![AD-10]({{ site.baseurl }}/assets/AD-10.png)
 
 # What Else?
 
