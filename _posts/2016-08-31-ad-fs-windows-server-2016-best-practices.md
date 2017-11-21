@@ -170,6 +170,10 @@ Update-AdfsCertificate -CertificateType Token-Decrypting -Urgent
 Update-AdfsCertificate -CertificateType Token-Signing -Urgent
 {% endhighlight %}
 
+## Apply modern branding
+
+Microsoft have rebranded the Microsoft Online login pages to be more _modern_. Consider updating AD FS to use this branding. There's a good guide [here](https://github.com/Microsoft/adfsWebCustomization/tree/master/centeredUi) on Microsoft's GitHub.
+
 ## Enable sensible logging
 
 AD FS doesn't log authentication successes or failures by default; these need to be turned on:
