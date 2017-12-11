@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Export a List of Office 365 Service Plans
+title: Delete All Content from an Exchange Online Mailbox
 ---
 
 Exchange has traditionally offered several methods by which to delete content 
