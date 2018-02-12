@@ -15,14 +15,14 @@ I know, I know, you're an AD person from the 2000s when the mantra was "users wi
 
 ### Check if users are allowed to create Groups
 
-    $Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
-    $Setting['EnableGroupCreation']
+  $Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
+  $Setting['EnableGroupCreation']
 
 ### Enable users to create Groups
 
-    $Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
-    $Setting['EnableGroupCreation'] = $true
-    Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+  $Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
+  $Setting['EnableGroupCreation'] = $true
+  Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
 
 ## Group Naming Conventions
 
@@ -30,17 +30,17 @@ I know, I know, you're an AD person from the 2000s when the mantra was "users wi
 
 Naming prefixes allow for user created Groups to have distinguishing names to allow them to be identified as user-created. A popular choice is to prefix all Groups created by users with "GRP". This can be done as follows:
 
-    $Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
-    $Setting["PrefixSuffixNamingRequirement"] = "GRP_[GroupName]"
-    Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+  $Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
+  $Setting["PrefixSuffixNamingRequirement"] = "GRP_[GroupName]"
+  Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
 
 ### Banned words and profanity filtering
 
 Empowering users is all well and good, but there's always the cheeky one or two who will think it's a great idea to put a profanity or other inappropriate word into a Group name. We can work to prevent this with banned words/profanity filtering.
 
-    $Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
-    $Setting["CustomBlockedWordsList"] = "Payroll,HR,Abuse,Complaints"
-    Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+  $Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
+  $Setting["CustomBlockedWordsList"] = "Payroll,HR,Abuse,Complaints"
+  Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
 
 ## Group Email Address Conventions
 
@@ -51,7 +51,7 @@ Groups can live in any domain of your Office 365 tenant. By default, they'll use
 
 Irrespective of which of the above you choose, do not leave it `@<tenant>.onmicrosoft.com`. The `onmicrosoft.com` domain belongs to Microsoft. If your organization chooses to leave Office 365 for another provider, any `@<tenant>.onmicrosoft.com` email addresses cannot be moved.
 
-    New-EmailAddressPolicy -Name Groups -IncludeUnifiedGroupRecipients -EnabledEmailAddressTemplates "SMTP:@groups.contoso.com" -Priority 1
+  New-EmailAddressPolicy -Name Groups -IncludeUnifiedGroupRecipients -EnabledEmailAddressTemplates "SMTP:@groups.contoso.com" -Priority 1
 
 ## Group Expiry
 
@@ -67,16 +67,16 @@ To run the commands in this post, you'll need the following Windows PowerShell m
 
 To install the modules above, run Windows PowerShell as an administrator and issue the following commands:
 
-    Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-Module AzureADPreview -AllowClobber
+  Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+  Install-Module AzureADPreview -AllowClobber
 
 Once you've installed the module, connect to Azure AD. We'll make sure you already have a Unified Groups configuration setting to modify. If not, we'll create one.
 
-    AzureADPreview\Connect-AzureAD
-    if (-not (Get-AzureADDirectorySetting | Where {$_.DisplayName -eq "Group.Unified"})) {
-        # The setting doesn't exist, create it
-        New-AzureADDirectorySetting -DirectorySetting (Get-AzureADDirectorySettingTemplate | Where-Object ({$_.DisplayName -eq "Group.Unified"}).CreateDirectorySetting()
-    }
+  AzureADPreview\Connect-AzureAD
+  if (-not (Get-AzureADDirectorySetting | Where {$_.DisplayName -eq "Group.Unified"})) {
+      # The setting doesn't exist, create it
+      New-AzureADDirectorySetting -DirectorySetting (Get-AzureADDirectorySettingTemplate | Where-Object ({$_.DisplayName -eq "Group.Unified"}).CreateDirectorySetting()
+  }
 
 * **Exchange Online PowerShell** requires installation of a ClickOnce application from within Office 365. Instructions are on [TechNet](https://technet.microsoft.com/en-us/library/mt775114(v=exchg.160).aspx)
 
