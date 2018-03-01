@@ -13,7 +13,6 @@ In my spare time, I fly little planes around the Melbourne area. My current goal
 ## Find Me
 
 * Email: [{{ site.footer-links.email }}](mailto:{{ site.footer-links.email }})
-* Twitter: [@{{ site.footer-links.twitter }}]({{ site.footer-links.twitter }})
+* Twitter: [@{{ site.footer-links.twitter }}](https://twitter.com/{{ site.footer-links.twitter }})
 * Blog: [{{ site.footer-links.blog }}]({{ site.footer-links.blog }})
 * GitHub: [{{ site.footer-links.github }}](https://github.com/{{ site.footer-links.github }})
-* Instagram: [@{{ site.footer-links.instagram }}](https://instagram.com/{{ site.footer-links.instagram }})
