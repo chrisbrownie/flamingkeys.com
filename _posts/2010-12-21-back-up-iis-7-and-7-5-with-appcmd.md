@@ -46,9 +46,9 @@ As a follow up to my [previous post](/iis-7-backup-and-restore) regarding a GUI 
 
 This method allows you to take a new backup of IIS. Execute the command as follows:
 
-    C:\> appcmd add backup "backupname"
+<pre><code class="dos">C:\> appcmd add backup "backupname"</code></pre>
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2010/12/image1.png)
+![]({{ site.baseurl }}/assets/backup-iis-001.png)
 
 This will create a new backup within IIS of your configuration with the title `backupname`. You can then use the following command to restore it:
 
@@ -56,9 +56,9 @@ This will create a new backup within IIS of your configuration with the title `b
 
 This method allows you to restore an existing backup of IIS. Execute the command as follows:
 
-    C:\> appcmd restore backup "backupname"
+<pre><code class="dos">C:\> appcmd restore backup "backupname"</code></pre>
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2010/12/image2.png)
+![]({{ site.baseurl }}/assets/backup-iis-002.png)
 
 This will restore the backup called "backupname" from within IIS. Note that IIS will be restarted during this process. You can tell AppCmd not to restart IIS by issuing the following parameter on the end of the command: `/stop:false`.
 
@@ -66,9 +66,9 @@ This will restore the backup called "backupname" from within IIS. Note that IIS 
 
 This command will allow you to list all stored backups. Issue as follows:
 
-    C:\> appcmd list backup
+<pre><code class="dos">C:\> appcmd list backup</code></pre>
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2010/12/image3.png)
+![]({{ site.baseurl }}/assets/backup-iis-003.png)
 
 This command can be used to find backups you wish to restore or delete.
 
@@ -78,18 +78,18 @@ To purge an existing backup, simply run:
 
     C:\> appcmd delete backup "backupname"
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2010/12/image4.png)
+![]({{ site.baseurl }}/assets/backup-iis-004.png)
 As is evident, this buried tool is quite useful for anyone making significant changes to an IIS install.
 For further information, you can always run
 
     C:\> appcmd backup /?
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2010/12/image5.png)
+![]({{ site.baseurl }}/assets/backup-iis-005.png)
 
 and for each individual tool a
 
     C:\> appcmd add backup /?
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2010/12/image6.png)
+![]({{ site.baseurl }}/assets/backup-iis-006.png)
 
 I hope this eases the pain of the otherwise complicated IIS backup situation.
