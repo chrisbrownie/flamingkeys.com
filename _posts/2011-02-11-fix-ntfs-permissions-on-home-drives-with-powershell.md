@@ -49,8 +49,7 @@ I use this regularly to keep our three file servers of home drives current, and 
 
 *UPDATE*: Thanks to reader 'Noel' for pointing out a fault with the `$inheritanceFlags` and `$propagationFlags` variables. I've updated the script to suit.
 
-{% highlight powershell %}
-#############################################################################
+<pre><code class="powershell">#############################################################################
 # Script: Repair-HomeFolderPermissions.ps1
 # Author: Chris Brown    http://www.flamingkeys.com
 # Date: 20/10/2010
@@ -174,4 +173,4 @@ if ($unfixablePermissions -gt 0) {
 }
 # Cleanup
 popd
-{% endhighlight %}
+</code></pre>
