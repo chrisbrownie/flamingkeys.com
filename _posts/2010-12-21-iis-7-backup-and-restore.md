@@ -44,17 +44,15 @@ With Exchange becoming only more integrated with Microsoft’s web server, [Inte
 For this reason, I was quite excited when I found [this blog post](http://blogs.msdn.com/b/rakkimk/archive/2007/11/04/iis7-backup-restore-ui-module.aspx) by [Rakki Muthukumar](http://blogs.msdn.com/b/rakkimk) over at MSDN blogs. Rakki has written a module for IIS 7 (which also works with 7.5) to allow for simple backing up and restoring of IIS. Simply download the extension [here](http://www.iis.net/community/default.aspx?tabid=34&amp;g=6&amp;i=1552) to get started.
 Installation is not trivial but should not pose any problem to those familiar with the keyboard and mouse. From a command line run `gacutil –i IIS7BackupRestore.dll` to insert it into your [Global Assembly Cache](http://msdn.microsoft.com/en-us/library/yf1d93sz.aspx). Secondly, open `%WINDIR%\System32\InetSrv\config\Administration.config` in your favourite text editor, then inside the `<moduleProviders>` section, add the following line:
 
-{% highlight xml %}
-<add name="IIS7BackupRestoreUI" type="IIS7BackupRestoreUI.MyModuleProvider, IIS7BackupRestoreUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=db9daa3d2ea5f6fd" />
-{% endhighlight %}
+<pre><code class="xml"><add name="IIS7BackupRestoreUI" type="IIS7BackupRestoreUI.MyModuleProvider, IIS7BackupRestoreUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=db9daa3d2ea5f6fd" /></code></pre>
 
 Inside the `<modules>` section of the same file, add the following line:
 
-{% highlight xml %}
+<pre><code class="xml">
 <add name="IIS7BackupRestoreUI" />
-{% endhighlight %}
+</code></pre>
 
 Restart IIS Manager and you’ll see the module here:
-![]({{ site.cdnbaseurl }}wp-content/uploads/2010/12/image.png)
+![]({{ site.baseurl }}/assets/backup-iis-restore-001.png)
 
 One thing to note is that the module (at least graphically) does not give you the option to delete or rename the backups, so take a moment to decide on a naming convention. I’d suggest something like `Date – Action`. For example `2011-12-21-NewSSLCertificate`.
