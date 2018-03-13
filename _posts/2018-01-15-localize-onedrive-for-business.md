@@ -9,7 +9,9 @@ Users can change their own OneDrive locale in Site Collection Settings...but try
 
 Firstly, you'll need an account that's a SharePoint Administrator or more. Chances are you're a Global Admins member, so we'll roll under that assumption. Additionally, you'll want the `Microsoft.SharePointOnline.CSOM` NuGet package, or grab the redistributable version.
 
-Let's assume we're working on `contoso.onmicrosoft.com`.
+Retrieve the scripts from the GitHub repository [chrisbrownie/LocalizeOneDriveForBusiness](https://github.com/chrisbrownie/LocalizeOneDriveForBusiness).
+
+Let's assume we're working on the Azure AD directory `contoso.onmicrosoft.com`.
 
 There's two scripts to run. The first will make you an Admin level user on every single OneDrive for Business in the tenant. Sounds nasty, and it kind of is. Make sure this isn't going to get you fired.
 
