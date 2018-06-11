@@ -39,6 +39,9 @@ excerpt: With my impending job change, I think it's about time I create a new pa
 redirect_from:
   - /2010/07/creating-a-secure-and-memorable-password/
 ---
+
+<div class="alert alert-warning">It's 2018, please do not use this method. Get a password manager like [1Password](https://1password.com/) or [LastPass](https://lastpass.com/) and use that instead.</div>
+
 With my impending job change, I think it's about time I create a new password. I haven't had a new password for many years (horrible, I know). I have tried a few over the years but they've all been thrown to the wayside in the way of my current password (which is an awesome one, just old).
 
 After a quick spot of googling I found [this page](http://www.microsoft.com/protect/fraud/passwords/create.aspx) at Microsoft.com. This is a simple article yet it helps the layperson work out a secure and memorable password. I do however have a few gripes with Microsoft's method. I don't like the first letter idea as it's not a password you can pronounce. I like a password I can rattle off like a word in my head; I find this makes it easier to remember. My current password is like this with a few numbers thrown in the mix and special characters surrounding it. The special characters up the complexity (in turn reducing the guessability) of the password considerably, yet once you know them are easy to remember. See [this article](http://blog.itsecurityexpert.co.uk/2008/01/winzip-encryption-password-security.html) on why special characters are so useful in passwords.  Particularly note this section:
