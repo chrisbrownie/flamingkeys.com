@@ -40,7 +40,7 @@ redirect_from:
   - /2010/07/creating-a-secure-and-memorable-password/
 ---
 
-<div class="alert alert-warning">It's 2018, please do not use this method. Get a password manager like [1Password](https://1password.com/) or [LastPass](https://lastpass.com/) and use that instead.</div>
+<div class="alert alert-warning">It's 2018, please do not use this method. Get a password manager like <a href="https://1password.com/" target="_blank">1Password</a> or <a href="https://lastpass.com/" target="_blank">LastPass</a> and use that instead.</div>
 
 With my impending job change, I think it's about time I create a new password. I haven't had a new password for many years (horrible, I know). I have tried a few over the years but they've all been thrown to the wayside in the way of my current password (which is an awesome one, just old).
 
