@@ -40,11 +40,12 @@ Immutable is a funny word. If you ask the dictionary, it'll tell you that it mea
 # Definitions
 
 Before we get started, let's define a few things:
-|     |
-| --- | ---
-| Active Directory Domain Services (AD) | This is your on-premises directory service where objects are "mastered". That is to say that the official "single source of truth" for anything we're concerned about here is AD. You may have another product that feeds into AD, but we'll treat whatever we see in AD as gospel
-| Azure Active Directory (AAD) | This is the directory behind Office 365. Any object that exists in Office 365 (think user, group, contact, etc.) resides in AAD. It's not exactly Active Directory, but it also kind of is. This isn't really relevant, we just care that it holds all the information and behaves somewhat like active directory
-| AAD Connect, AADSync, DirSync | This is the magic glue. AAD Connect, formerly AADSync, formerly DirSync. AAD Connect speaks to both AD and AAD and works out what changes need to be made in each, if any. If an object is created in AD within the scope of AAD Connect, AAD Connect will create that object in AAD. If an object is updated in AD within the scope of AAD Connect, AAD Connect will update the object accordingly in AAD. There are a number of write-back scenarios available (password, device, group, etc.) but, for the most part, this synchronization is one-directional.
+
+| Term | Definition |
+| --- | --- |
+| Active Directory Domain Services (AD) | This is your on-premises directory service where objects are "mastered". That is to say that the official "single source of truth" for anything we're concerned about here is AD. You may have another product that feeds into AD, but we'll treat whatever we see in AD as gospel |
+| Azure Active Directory (AAD) | This is the directory behind Office 365. Any object that exists in Office 365 (think user, group, contact, etc.) resides in AAD. It's not exactly Active Directory, but it also kind of is. This isn't really relevant, we just care that it holds all the information and behaves somewhat like active directory |
+| AAD Connect, AADSync, DirSync | This is the magic glue. AAD Connect, formerly AADSync, formerly DirSync. AAD Connect speaks to both AD and AAD and works out what changes need to be made in each, if any. If an object is created in AD within the scope of AAD Connect, AAD Connect will create that object in AAD. If an object is updated in AD within the scope of AAD Connect, AAD Connect will update the object accordingly in AAD. There are a number of write-back scenarios available (password, device, group, etc.) but, for the most part, this synchronization is one-directional |
 
 # Understanding primary keys
 
