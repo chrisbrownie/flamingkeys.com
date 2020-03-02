@@ -29,7 +29,7 @@ redirect_from:
 ---
 Upon receiving a few emails with their subjects entirely in capital letters, I wondered if I could defuse my extreme frustration at this situation using every Exchange admin’s best friend; the Transport Rule.
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2012/05/image3.png)
+![]({{ site.baseurl }}/assets/angrycaps0.png)
 
 I was able to create the following transport rule to bounce/reject all messages with only capital letters in the subject, including ignoring the common indicators for replies etc.:
 
@@ -44,6 +44,6 @@ This creates a new transport rule, and any message whose subject (or body) match
 
 When a user tries to send a message with only capitals in the title, the following is returned. Note the 5.7.111 "Do not use a capitalised" subject bounce message.
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2012/05/image4.png)
+![]({{ site.baseurl }}/assets/angrycaps1.png)
 
 This is obviously not something I recommend deploying in production, but it does show how easy it is to evaluate message bodies and subjects using regular expressions.
