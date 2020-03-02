@@ -47,14 +47,14 @@ It is possible to use three simple cmdlets to retrieve any and all data that is 
 
 *Send Connectors* are present at the organization level (that is, they are not specific to a particular server, and can be assigned to one or more). To retrieve send connectors, simply use the `Get-SendConnector` cmdlet. We are looking at the `MaxMessageSize` property:
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2011/04/image.png)
+![]({{ site.baseurl }}/assets/image.png)
 
 *Receive Connectors* are server-specific. Fortunately, however, this is irrelevant in our case: `Get-SendConnector` and the `MaxMessageSize` property are this time of interest:
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2011/04/image1.png)
+![]({{ site.baseurl }}/assets/image1.png)
 
 Finally let’s investigate the Global Transport Config. This applies to *All* transports in the Organization. You can retrieve its settings by running the cmdlet `Get-TransportConfig`. We’re interested in the properties `MaxReceiveSize` and `MaxSendSize`:
-![]({{ site.cdnbaseurl }}wp-content/uploads/2011/04/image2.png)
+![]({{ site.baseurl }}/assets/image2.png)
 
 ## Making it Pretty
 
@@ -62,6 +62,7 @@ It’s pretty easy to trawl through the above results and investigate them...but
 
 I’ve put all my relative limits into an object array that looks like this:
 
+```
 Type                 Server           Name                                           Limit
 ----                 ------           ----                                           -----
 SendConnector        Organization     EdgeSync - Default-First-Site-Name to Internet 10 MB (10,485,760 bytes)
@@ -74,6 +75,7 @@ ReceiveConnector     EX01             Anonymous Authentication Networks         
 ReceiveConnector     EX02             Anonymous Authentication Networks              15 MB (15,728,640 bytes)
 TransportConfig      Organization     Maximum Receive Size                           15 MB (15,728,640 bytes)
 TransportConfig      Organization     Maximum Send Size                              15 MB (15,728,640 bytes)
+```
 
 Let’s grab the smallest limit from here (Note: Usually you would use `Measure-Object` here, but "unlimited" is, unfortunately, not a numerical value):
 
@@ -88,10 +90,10 @@ Now we know which is the very smallest size of message that can fully traverse t
 $limits | Where {$_.Limit -eq ($smallest).Limit }
 {% endhighlight %}
 
-Download the finished script [here]({{ site.cdnbaseurl }}/wp-content/uploads/2011/04/Get-MessageSizeLimits.ps1_.txt)
+Download the finished script [here](https://gist.github.com/chrisbrownie/19717b4f7a19dcb6f3b712b8bb54af0f).
 
 And of course, the output:
-
+```
     The maximum size of any email that can fully traverse your Exchange Organization is 10 MB (10,485,760 bytes)
     This is because of the following object(s):
 
@@ -105,4 +107,5 @@ And of course, the output:
     Raise the size of message allowed across Send Connectors with Set-SendConnector -MaxMessageSize
     Raise the size of message allowed across Receive Connectors with Set-ReceiveConnector -MaxMessageSize
     Raise the size of message allowed across the global transport config with Set-TransportConfig -MaxReceiveSize
-		and Set-TransportConfig -MaxSendSize</pre>
+    and Set-TransportConfig -MaxSendSize
+```

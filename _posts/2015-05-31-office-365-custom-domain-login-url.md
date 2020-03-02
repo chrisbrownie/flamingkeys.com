@@ -38,8 +38,8 @@ In case you haven't yet customised your Azure AD - [what are you waiting for](ht
 
 Hot: 
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2015/05/readify.png)
+![]({{ site.baseurl }}/assets/readify.png)
 
 Not:
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2015/05/logindefault.png)
+![]({{ site.baseurl }}/assets/logindefault.png)

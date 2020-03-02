@@ -40,11 +40,11 @@ redirect_from:
 
 This error occurs when inheritable permissions are not enabled on a mailbox. You will see this error when trying to remove an ActiveSync Device:
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2011/08/image.png")
+![]({{ site.baseurl }}/assets/permissions0.png)
 
 To fix this, first enable `Advanced Features` in ADUC:
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2011/08/image1.png)
+![]({{ site.baseurl }}/assets/permissions1.png)
 
 Then open the user’s properties and browse to the Security tab. Click `Advanced` and then place a check in the box labeled `Include inheritable permissions from this object’s parent`. Click OK twice to apply. Wait for AD to replicate to your GCs then retry the action in Exchange. It will now remove the device successfully.
 
