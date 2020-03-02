@@ -45,11 +45,11 @@ Checking the log file gives the following access denied message, which is less t
          at Microsoft.Exchange.Management.Common.FileShareWitness.Initialize()         
           at Microsoft.Exchange.Management.SystemConfigurationTasks.NewDatabaseAvailabilityGroup.InternalValidate()
 
-![]({{ site.baseurl }}dagwitness1.png)
+![]({{ site.baseurl }}/assets/dagwitness1.png)
 
 What’s happening here is that the Exchange server is trying to create a file share on the FSW host, in this case **E15DC1**. In order to allow this functionality on a domain controller, you must add it to the **Exchange Trusted Subsystem** group. This is an Active Directory group used internally by Exchange for reading/writing this share, amongst other things. Typically it will only contain Exchange Servers, but go ahead and add your file share witness host to it as well:
 
-![]({{ site.baseurl }}dagwitness2.png)
+![]({{ site.baseurl }}/assets/dagwitness2.png)
 
 Now comes the bit that makes the security part of me cringe. Exchange Trusted Subsystem (i.e. your Exchange servers) need to be able to create shares on this server and read/write them. As a domain controller has no local security groups, you need to apply this change directory-wide. Add *Exchange Trusted Subsystem* to your Administrators group:
 
@@ -59,7 +59,7 @@ What you’ve done here is made every Exchange server a domain admin. This means
 
 After giving your DC a reboot (to update its security group membership), **Exchange Trusted Subsystem **will be able to create shares on it, and your DAG will be able to be created successfully:
 
-![]({{ site.baseurl }}dagwitness3.png)
+![]({{ site.baseurl }}/assets/dagwitness3.png)
 
 Add some member servers and Bob’s your uncle. Did I mention don't do this in production?
 
