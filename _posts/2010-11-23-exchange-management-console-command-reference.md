@@ -57,6 +57,6 @@ Many, however, are not aware of another tool which is (in my opinion) even more 
 
 This little treasure allows you to view any and all PowerShell queries previously run by the Exchange Management Console (in this session). This is very useful if you (like me) spend many hours writing email reports and similar in PowerShell, spending most of your time guessing the queries. Simply open a dialog or screen, hit refresh if necessary (For example, Recipient Mailboxes needs refreshing occasionally), then open the Exchange Management Shell Command Log and scroll to the bottom.
 
-![]({{ site.cdnbaseurl }}wp-content/uploads/2010/11/psCommandLogViewer.png)
+![]({{ site.baseurl }}/assets/psCommandLogViewer.png)
 
 From here you can paste (or retype, or modify, the list goes on) this command into Exchange Management Shell or into your .ps1 scripts. I hope this helps you gain more insight into what is a very powerful tool, and that you can save yourself some time by doing what all of us lazy messaging admins do – write scripts!
