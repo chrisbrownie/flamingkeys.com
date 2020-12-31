@@ -54,11 +54,14 @@ Windows Server Update Services (WSUS) is a fickle beast, at best. Anyone who has
 
 A quick query of the database showed I had 500-odd of these:
 
-<pre><code class="sql">SELECT COUNT([UpdateId]) FROM [SUSDB].[PUBLIC_VIEWS].[vUpdate] WHERE DefaultTitle LIKE '%Itanium%' AND IsDeclined=0</code></pre>
+```sql
+SELECT COUNT([UpdateId]) FROM [SUSDB].[PUBLIC_VIEWS].[vUpdate] WHERE DefaultTitle LIKE '%Itanium%' AND IsDeclined=0
+```
 
 To bulk decline these updates en mass the following script had to be created:
 
-<pre><code class="sql">DECLARE @RC int;
+```sql
+DECLARE @RC int;
 DECLARE @count int;
 DECLARE @updateID uniqueidentifier;
 DECLARE @adminName nvarchar(385);
@@ -78,7 +81,8 @@ WHILE @count &amp;lt;= (SELECT COUNT(*) FROM @tbl) BEGIN
                 SET @updateID = (SELECT updateid FROM @tbl WHERE ID = @count);
                 EXECUTE @RC = [SUSDB].[dbo].[spDeclineUpdate] @updateID, @adminName, @failIfReplica
                 SET @count += 1;
-END</code></pre>
+END
+```
 
 This allowed me to decline every Itanium update in WSUS, significantly reducing the number of updates for me to sift through manually. As it leverages the built in stored procedure 'spDeclineUpdate' in the WSUS database you can fairly safely assume it will decline the updates appropriately.
 
@@ -86,7 +90,11 @@ This allowed me to decline every Itanium update in WSUS, significantly reducing 
 
 If you're running Windows Server 2012 or newer, you can do this really easily with PowerShell:
 
-<pre><code class="powershell">Get-WsusUpdate | Where {$_.update.title -ilike "*itanium*" -or $_.update.title -ilike "*ia64*"} | Deny-WsusUpdate</code></pre>
+```powershell
+Get-WsusUpdate | 
+  Where {$_.update.title -ilike "*itanium*" -or $_.update.title -ilike "*ia64*"} | 
+  Deny-WsusUpdate
+```
 
 Warning: this is very, very, very slow. But it will get there eventually. Probably.
 
