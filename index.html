@@ -4,7 +4,7 @@ layout: default
 
 {% for post in site.posts %}
 <div class="row">
-  <div class="col-2 post-date">{{ post.date | date_to_string }}</div>
+  <div class="col-2 post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
   <div class="col post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 </div>
 {% endfor %}
