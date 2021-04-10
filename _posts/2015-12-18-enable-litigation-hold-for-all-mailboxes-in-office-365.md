@@ -27,4 +27,22 @@ redirect_from:
 ---
 There's no built-in feature at this time to enable litigation hold for all mailboxes in Exchange Online, but some organisations have this as a requirement. Here's a script that can be run ad-hoc to enable litigation hold for all mailboxes. When prompted, enter your Exchange Online credentials.
 
-{% gist 16affe1e52966a998d6f985a349c929e %}
+```powershell
+# Connect to Exchange Online
+$exo = New-PSSession -ConfigurationName Microsoft.Exchange `
+-ConnectionUri https://ps.outlook.com/powershell-liveid `
+-Authentication Basic `
+-AllowRedirection `
+-Credential $(Get-credential)
+
+Import-PSSession $exo
+
+# Get all mailboxes that do not have litigation hold enabled
+$mailboxes = Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"} | 
+Where {$_.LitigationHoldEnabled -ne $true}
+
+# Enable litigation hold
+$mailboxes | Set-Mailbox -LitigationHoldEnabled $true 
+
+Remove-PSSession $exo 
+```

@@ -13,10 +13,20 @@ As part of my troubleshooting, I determined that Password Writeback needed to be
 
 To disable AAD Connect Password Writeback using Windows PowerShell, run the following commands from a shell as administrator on your AAD Connect server:
 
-{% gist c686925d97d5607d47e7381ef54da9f6 %}
+```powershell
+Import-Module ADSync
+$connector = (Get-ADSyncConnector | Where-Object {$_.Name -ilike "*AAD"}).Name
+Get-ADSyncAADPasswordResetConfiguration -Connector $connector
+Set-ADSyncAADPasswordResetConfiguration -Connector $connector -Enable:$false
+```
 
 # Enable Password Sync
 
 To enable AAD Connect Password Writeback using Windows Powershell, run the following commands from a shell as administrator on your AAD Connect server:
 
-{% gist 440cf9cb0b2d2409335836fee23188d4 %}
+```powershell
+Import-Module ADSync
+$connector = (Get-ADSyncConnector | Where-Object {$_.Name -ilike "*AAD"}).Name
+Get-ADSyncAADPasswordResetConfiguration -Connector $connector
+Set-ADSyncAADPasswordResetConfiguration -Connector $connector -Enable:$true 
+```

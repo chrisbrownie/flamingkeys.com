@@ -41,11 +41,17 @@ The following commands should be used from the [Windows Azure Active Directory P
 
 ## For a federated domain (AD FS)
 
-{% gist 3e7bead963dc797a4b443644f1dce8d1 %}
+```powershell
+Connect-MsolService
+New-MsolDomain -Name sub.contoso.com -Authentication Federated
+```
 
 ## For a managed (standard, in cloud, non-federated, password sync, cloud only, whatever you'd like to call it) domain
 
-{% gist 32f62e2082681825b8f75f34fbfcde1e %}
+```powershell
+Connect-MsolService
+New-MsolDomain -Name sub.contoso.com -Authentication Managed
+```
 
 You can use [Get-MsolDomain](https://msdn.microsoft.com/en-us/library/dn194090.aspx) to validate this configuration.
 

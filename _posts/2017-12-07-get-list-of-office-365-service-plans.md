@@ -14,7 +14,9 @@ to create a `LicenseOptions` object that has all the components of your licence
 configured, then apply that object to the users in question. The command looks
 like this to assign an E3 license and disable Exchange Online:
 
-{% gist a5c63e1d5bf167535418d5032e087cf4 %}    
+```powershell
+New-MsolLicenseOptions -AccountSkuId contoso:ENTERPRISEPACK -DisabledPlans "EXCHANGE_S_ENTERPRISE"
+```
 
 That's all well and good, but how do you know it's `ENTERPRISEPACK` and 
 `EXCHANGE_S_ENTERPRISE`? These are the internal identifiers for the E3 license 
@@ -23,7 +25,13 @@ and the Exchange Online service plan within the E3 license. They're challenging
 allow an administrator to retrieve the licenses and service plans in their
 tenant. This should be run from the Microsoft Online Service PowerShell.
 
-{% gist ab6ba3868618900cf4bbc46d960c5fee %}
+```powershell
+foreach ($sku in (Get-MsolAccountSku) ) { 
+  foreach ($sp in $sku.ServiceStatus) { 
+    New-Object -TypeName PSObject -Property @{"AccountSkuId"=$sku.AccountSkuId;"ServicePlan"=$sp.ServicePlan.ServiceName} 
+  }
+}
+```
 
 This will output something like the following:
 

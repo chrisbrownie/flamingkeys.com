@@ -18,28 +18,41 @@ mailbox. This looks like the following:
 This creates a tag called *1 Day Delete* which deletes items more than 1 day 
 old
 
-{% gist 5aa75b906e871339f4a8d5260c593bde %}
+```powershell
+New-RetentionPolicyTag -Name "1 Day Delete" -AgeLimitForRetention (New-TimeSpan -Days 1) -RetentionAction DeleteAndAllowRecovery -Type "All"
+```
 
 ## Create a retention policy and assign the 1 Day Delete Tag
 
 This creates a policy called *Mailbox Purge Policy* and assigns the 
 `1 Day Delete` tag to it.
 
-{% gist 2b7ec102e469c2b9b4eea180bbe591fb %}
+```powershell
+New-RetentionPolicy -Name "Mailbox Purge Policy" -RetentionPolicyTagLinks "1 Day Delete"
+```
 
 ## Assign the retention policy to the mailboxes to be purged
 
 Let's assign the *Mailbox Purge Policy* policy to the mailboxes to be cleared.
 In this case, it's `AdeleV` and `KimA`.
 
-{% gist a5dd7b71a2f48d7bd10d13cc43436bd6 %}
+```powershell
+$Mailboxes = @(
+  "AdeleV",
+  "KimA"
+  )
+
+$Mailboxes | Set-Mailbox -RetentionPolicy "Mailbox Purge Policy"
+```
 
 After the policy is applied, the Managed Folder Assistant should be triggered
 to force an immediate application of the policy. Beware that AD replication
 within Office 365 may mean that the Retention Policy takes around half an hour
 to apply, after which point the following can be run:
 
-{% gist cc9e97e28df4c17f86ce07ecce4fef64 %}
+```powershell
+$Mailboxes | ForEach-Object { Start-ManagedFolderAssistant -Identity $_ }
+```
 
 Running this command will trigger the Managed Folder Assistant to run across 
 the mailboxes in question, thus deleting the content.

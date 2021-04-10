@@ -51,25 +51,50 @@ Before you complete any of the commands below, you'll need to [Connect PowerShel
 
 Say, for example, you need to encrypt all messages sent by the security team. Provided they're all in a distribution group called 'Security' we can handle this like so:
 
-{% gist 71810b880d202c52b14efbc21fb2c8e0 %}
+```powershell
+New-TransportRule -Name "Encrypt mail from the Security team" `
+    -RuleErrorAction Defer `
+    -FromMemberOf 'security@contoso.com' `
+    -SetAuditSeverity Low `
+    -ApplyOME $true
+```
 
 ## Encrypt Based on Recipient Domain
 
 If you deal with an organisation that requires all correspondence to be encrypted, this may come in handy. You can create a rule to encrypt all messages to a particular SMTP domain as follows:
 
-{% gist d94e70af9cf98cc929c805f950f571d2 %}
+```powershell
+New-TransportRule -Name "Encrypt mail to Woodgrove Bank" `
+    -RuleErrorAction Defer `
+    -RecipientAddressMatchesPatterns '^[A-Z0-9._%+-]+@woodgrovebank.com$'
+    -SetAuditSeverity Low `
+    -ApplyOME $true
+```
 
 ## Encrypt Based on Message Sensitivity (Private/Confidential)
 
 This solution is a mechanism that allows for easy and transparent, but selective, rollout of OME behaviour. You can advise staff that marking a message as "Private" or "Confidential" in Outlook will cause it to be encrypted. This rule looks like the following:
 
-{% gist https://gist.github.com/chrisbrownie/83291881584c3d863a0a8c9c79d28a67 %}
+```powershell
+New-TransportRule -Name "Encrypt mail marked as Private or Confidential" `
+    -RuleErrorAction Defer `
+    -HeaderMatchesMessageHeader "Sensitivity"`
+    -HeaderMatchesPatterns "Private","Company-Confidential" `
+    -SetAuditSeverity Low `
+    -ApplyOME $true
+```
 
 ## Encrypt Based on Subject
 
-This solution encrypts messages based on the content of a subject. This means that users can enter a specific string in a message subject to have it encrypted upon send. This might be useful if you already have plugins that categorize messages (think [SEC=UNCLASSIFIED]).
+This solution encrypts messages based on the content of a subject. This means that users can enter a specific string in a message subject to have it encrypted upon send. This might be useful if you already have plugins that categorize messages (think _\[SEC=UNCLASSIFIED\]_).
 
-{% gist bdb5ee0a41bcfe94d00bf62fb11b9653 %}
+```powershell
+New-TransportRule -Name "Encrypt mail with [encrypt] in subject" `
+    -RuleErrorAction Defer `
+    -SubjectMatchesPatterns '(?:^|\W|\w)\[encrypt\](?:$|\W|\w)'
+    -SetAuditSeverity Low `
+    -ApplyOME $true
+```
 
 _Thanks to [this thread](https://techcommunity.microsoft.com/t5/Exchange/Transport-rule-for-message-encryption-with-regex/m-p/18772) for prompting me to have a think about this one.
 

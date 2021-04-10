@@ -36,4 +36,8 @@ Run Exchange Management Shell as administrator on an Exchange server and execute
 
 # PowerShell Script to enable IMAP on all servers
 
-{% gist 5266366490cde805e5a0e2bd7cff8eb1 %}
+```powershell
+$Servers = Get-ExchangeServer | ? IsE15OrLater | Select -exp Name
+Get-Service -ComputerName $servers -Name “MSExchangeIMAP4”,”MSExchangeIMAP4BE” | Set-Service -StartupType Automatic
+Get-Service -ComputerName $servers -Name “MSExchangeIMAP4”,”MSExchangeIMAP4BE” | Start-Service
+```

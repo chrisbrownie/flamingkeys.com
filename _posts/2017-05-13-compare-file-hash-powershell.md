@@ -15,7 +15,9 @@ This simple function allows a caller to compare a file to an existing hash in an
 
 Using the script is quite simple. Add it to your console or a script, then run:
 
-{% gist 262d35f74e294967484b9f516330d3b1 %}
+```powershell
+Compare-FileToHash -Path "C:\windows\system32\shell32.dll" -expectedHash "F683E63A08F385F52E86990CEB62CF1374A23373" -algorithm "SHA1"
+```
 
 This will return the full object that shows the expected, generated, and hashing result:
 
@@ -25,7 +27,9 @@ This will return the full object that shows the expected, generated, and hashing
 
 The result only can be retrieved by running the script as follows:
 
-{% gist 81e9ce8e144108fc40e87cf08aa0f85d %}
+```powershell
+(Compare-FileToHash -Path "C:\windows\system32\shell32.dll" -expectedHash "F683E63A08F385F52E86990CEB62CF1374A23373" -algorithm "SHA1").Match
+```
 
 This will return a boolean, either $true or $false.
 

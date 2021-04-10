@@ -11,17 +11,74 @@ In migrating large (several hundred GB) department file systems to Groups, after
 
 First, you'll need to install the [SharePoint Patterns & Practices](https://github.com/SharePoint/PnP-PowerShell) `SharePointPnP` module. This can be installed using PowerShellGet on Windows 10:
 
-{% gist e608c649583b52b856c78943b7ec862e %}
+```powershell
+Install-Package SharePointPnpPowerShellOnline
+```
 
 Secondly, download the script to a folder on your computer by either selecting the text and saving it, or running the PowerShell code beneath it:
 
-{% gist 1ee513f4b0f9ebc76f0fe84d032c3cb9 %}
+```powershell
+param(
+    [String]
+    $Path, #the path to the files to be uploaded
+    
+    [String]
+    $siteUrl, #this is the URL of the Group in the format https://contoso.sharepoint.com/sites/yourGroupName
+    
+    [String]
+    $listName = "Shared Documents"
+              #this is the path within the site to the place where you want to put the files
+              #the Groups 'files' list is 'Shared Documents' which is the default
+    )
 
-{% gist 31fe9b11e598f597ca3828eaf93b4a46 %}
+Connect-PnPOnline -Url $siteUrl -UseWebLogin
+
+$SourcePath = Get-Location
+
+$AllFiles = Get-ChildItem $Path -Recurse -Force -ErrorAction SilentlyContinue
+
+$filesCreated= @()
+
+foreach ($file in $Allfiles) {
+
+    if ($file.GetType().Name -ne "DirectoryInfo") {
+    
+        #$file.FullName
+        $filePath = [System.IO.Path]::GetDirectoryName($file.FullName)+"\"
+        $urlPath = $filepath.Replace($SourcePath,"").Replace("/","\")
+        $SpoPath = $listName+$urlPath
+        $FileUrl = $siteUrl + "/" + $listName + "/" + $file.FullName.Replace($pwd.ToString(),"").TrimStart("\").Replace("\","/")
+
+        try {
+            Get-PnPFile -Url $FileUrl -ErrorAction Stop | Out-Null
+            # If we got here, the file exists in the target location, do nothing
+        } catch { 
+            # If we got here, the file doesn't exist in the target location, so let's create it
+            $filesCreated+=Add-PnPFile -Path $file.FullName -Folder $SpoPath -Values @{
+                Modified = $file.LastWriteTime
+                Created = $file.CreationTime
+            }
+        }
+
+    }
+
+}
+```
+
+```powershell
+$files = (Invoke-RestMethod -Uri "https://api.github.com/gists/1ee513f4b0f9ebc76f0fe84d032c3cb9").files
+$fileName = $files | Get-Member -Type NoteProperty | Select -First 1 -ExpandProperty Name
+Set-Content -Path $filename -Value $files.$filename.content
+```
 
 Thirdly, run the script with the appropriate parameters:
 
-{% gist 6156e57ae2bebbfca3fa835d525bf1e4 %}
+```powershell
+. .\CopyFilesToOffice365Group.ps1 `
+    -Path 'M:\Shared\Human Resources\'
+    -SiteUrl 'https://contoso.sharepoint.com/sites/HumanResources' `
+    -listName 'Shared Documents'
+```
 
 Done! Now it'll run and copy your files up. Errors will need to be reviewed and remediated manually, though the PnP module does a pretty decent job of telling you what went wrong.
 

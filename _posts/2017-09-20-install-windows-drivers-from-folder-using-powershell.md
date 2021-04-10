@@ -5,7 +5,10 @@ title: Install Windows Drivers from a Folder Using PowerShell
 
 When building any computer, virtual or physical, it requires drivers. This script will allow you to place a folder of `.inf` (and associated) files onto a computer and then install all relevant drivers. This script is tested as working on Windows Server 2016 and Windows Server 2016 Core.
 
-{% gist dded5da5cbb69dc5f37c9b603797830d %}
+```powershell
+Get-ChildItem "C:\mydrivers\" -Recurse -Filter "*.inf" | 
+ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
+```
 
 ## How does it work?
 

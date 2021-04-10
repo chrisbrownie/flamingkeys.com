@@ -15,25 +15,39 @@ I know, I know, you're an AD person from the 2000s when the mantra was "users wi
 
 ### Check if users are allowed to create Groups
 
-{% gist 50908b611c9695c77828b2a2b2e00337 %}
+```powershell
+$Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
+$Setting['EnableGroupCreation']
+```
 
 ### Enable users to create Groups
 
-{% gist 84de2f1b611fb29ff8aac0815465d0b9 %}
-
+```powershell
+$Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
+$Setting['EnableGroupCreation'] = $true
+Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+```
 ## Group Naming Conventions
 
 ### Naming Prefixes
 
 Naming prefixes allow for user created Groups to have distinguishing names to allow them to be identified as user-created. A popular choice is to prefix all Groups created by users with "GRP". This can be done as follows:
 
-{% gist e32ea05d035f7976d563729f501e5448 %}
+```powershell
+$Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
+$Setting["PrefixSuffixNamingRequirement"] = "GRP_[GroupName]"
+Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+```
 
 ### Banned words and profanity filtering
 
 Empowering users is all well and good, but there's always the cheeky one or two who will think it's a great idea to put a profanity or other inappropriate word into a Group name. We can work to prevent this with banned words/profanity filtering.
 
-{% gist 21ae2cd56fcc6406f55978f937d91094 %}
+```powershell
+$Setting = Get-AzureADDirectorySetting  | Where {$_.DisplayName -eq "Group.Unified"}
+$Setting["CustomBlockedWordsList"] = "Payroll,HR,Abuse,Complaints"
+Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+```
 
 ## Group Email Address Conventions
 
@@ -60,11 +74,20 @@ To run the commands in this post, you'll need the following Windows PowerShell m
 
 To install the modules above, run Windows PowerShell as an administrator and issue the following commands:
 
-{% gist 87c106f878ca2eea9cdc8a97ea8ab781 %}
+```powershell
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+Install-Module AzureADPreview -AllowClobber
+```
 
 Once you've installed the module, connect to Azure AD. We'll make sure you already have a Unified Groups configuration setting to modify. If not, we'll create one.
 
-{% gist 54f97d1d2e7ddfc37d1f9f27683fd0c4 %}
+```powershell
+  AzureADPreview\Connect-AzureAD
+  if (-not (Get-AzureADDirectorySetting | Where {$_.DisplayName -eq "Group.Unified"})) {
+      # The setting doesn't exist, create it
+      New-AzureADDirectorySetting -DirectorySetting (Get-AzureADDirectorySettingTemplate | Where-Object ({$_.DisplayName -eq "Group.Unified"}).CreateDirectorySetting()
+  }
+```
 
 * **Exchange Online PowerShell** requires installation of a ClickOnce application from within Office 365. Instructions are on [TechNet](https://technet.microsoft.com/en-us/library/mt775114(v=exchg.160).aspx)
 

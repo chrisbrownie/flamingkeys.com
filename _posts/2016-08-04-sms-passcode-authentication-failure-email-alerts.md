@@ -33,7 +33,40 @@ SMS PASSCODE is a good tool, but it does not provide functionality to alert in t
 
 Copy the following to a known location (in this example, `C:\Scripts\Send-FailedLoginAlert.ps1`).
 
-{% gist 31f6784174452c5d64a98d04497336cc %}
+```powershell
+# Fired when a SMSSec 2000 (AuthN failure) occurs
+ 
+$SmtpDetails = @{
+    "SmtpServer" = "smtp.margiestravel.com"
+    "To" = "admin@margiestravel.com"
+    "Subject" = ""
+    "Body" = ""
+    "From" = "alerts@margiestravel.com"
+    "BodyAsHtml" = $true
+    "Priority" = "High"
+    }
+ 
+# Get the latest 2000 event from the SMSSec log
+$Event = Get-EventLog -LogName "SMSSec" -Newest 1 -InstanceId 2000
+ 
+# Tear the details of the event apart into a hashtable we can work with
+$EventDetails = @{}
+$event.ReplacementStrings.Split("`n") | % {
+    try { $EventDetails.Add($_.Split(":")[0].Trim(), $_.split(":")[1].Trim()) } catch { }
+    }
+     
+$SmtpDetails.Subject = "'$($EventDetails.Login)': SMS PASSCODE Login Failure! "
+$SmtpDetails.Body = @"
+<strong>SMS PASSCODE Authentication Failure!</strong><br /><br />
+Timestamp: $($Event.TimeGenerated)<br />
+Username: $($EventDetails.Login)<br />
+End-User IP: $($EventDetails.'End-user IP')<br />
+Reason: $($EventDetails.Reason)<br /><br />
+Session ID: $($EventDetails.'Session ID')<br />
+"@
+ 
+Send-MailMessage @SmtpDetails
+```
 
 # Create the Scheduled Task
 
